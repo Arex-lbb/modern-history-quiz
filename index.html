@@ -3,615 +3,494 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>中国近现代史纲要 · 题库练习</title>
+<title>中国近现代史纲要 · 单选题库</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 :root {
-  --paper: #f5f0e8;
-  --paper-dark: #e8e0d0;
-  --ink: #2c1810;
-  --ink-light: #5c4a3a;
-  --vermilion: #c41e3a;
-  --vermilion-light: #f0d0d0;
-  --gold: #c9a96e;
-  --gold-light: #f5ecd7;
-  --jade: #5b8c5a;
-  --jade-light: #e0f0e0;
-  --border: #c4b8a8;
-  --shadow: rgba(44,24,16,0.12);
+  --bg-deep: #0c0c14;
+  --bg-base: #14141e;
+  --bg-card: #1e1e2c;
+  --bg-hover: #252535;
+  --text-primary: #ede4d8;
+  --text-secondary: #8a8078;
+  --text-muted: #5c5650;
+  --gold: #c8a24e;
+  --gold-dim: #6b5830;
+  --gold-glow: rgba(200,162,78,0.12);
+  --jade: #5a9e7c;
+  --jade-dim: #2d4f3e;
+  --jade-glow: rgba(90,158,124,0.12);
+  --vermilion: #c4554d;
+  --vermilion-dim: #5c2824;
+  --vermilion-glow: rgba(196,85,77,0.10);
+  --border: #2a2520;
+  --border-light: #353028;
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 14px;
+  --font-serif: 'Noto Serif SC', 'Source Han Serif SC', 'SimSun', serif;
+  --font-sans: 'Noto Sans SC', 'Source Han Sans SC', 'PingFang SC', sans-serif;
+  --font-display: 'EB Garamond', 'Noto Serif SC', serif;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-* { margin:0; padding:0; box-sizing:border-box; }
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { font-size: 16px; -webkit-font-smoothing: antialiased; }
 
 body {
-  font-family: 'Noto Serif SC', 'SimSun', 'STSong', serif;
-  background: 
-    radial-gradient(ellipse at 20% 50%, rgba(201,169,110,0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(196,30,58,0.04) 0%, transparent 50%),
-    linear-gradient(180deg, #f7f3ea 0%, #f0e8d5 50%, #f5f0e8 100%);
-  background-attachment: fixed;
+  font-family: var(--font-serif);
+  background: var(--bg-deep);
+  color: var(--text-primary);
   min-height: 100vh;
-  color: var(--ink);
-  line-height: 1.8;
+  line-height: 1.75;
+  overflow-x: hidden;
 }
 
-/* Paper texture overlay */
 body::before {
   content: '';
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 0;
+  position: fixed; inset: -40%;
+  background:
+    radial-gradient(ellipse 80% 60% at 30% 20%, rgba(200,162,78,0.03) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 80% at 70% 70%, rgba(90,158,124,0.02) 0%, transparent 50%);
+  pointer-events: none; z-index: 0;
 }
 
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 24px 20px 60px;
-  position: relative;
-  z-index: 1;
-}
-
-/* Header */
-.header {
-  text-align: center;
-  padding: 40px 0 32px;
-  border-bottom: 2px solid var(--border);
-  margin-bottom: 32px;
-  position: relative;
-}
-
-.header::after {
+body::after {
   content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 6px;
-  background: var(--vermilion);
-  border-radius: 2px;
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 1;
 }
 
+.app {
+  position: relative; z-index: 2;
+  max-width: 820px; margin: 0 auto;
+  padding: 32px 20px 80px;
+}
+
+/* HEADER */
+.header {
+  text-align: center; padding: 40px 0 0; margin-bottom: 36px;
+}
+.header-tag {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.7rem; font-weight: 500;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid var(--gold-dim);
+  padding: 4px 14px; border-radius: 50px; margin-bottom: 18px;
+}
 .header h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--ink);
-  letter-spacing: 0.08em;
-  margin-bottom: 8px;
+  font-family: var(--font-serif);
+  font-size: 1.9rem; font-weight: 600;
+  letter-spacing: 0.05em; margin-bottom: 6px;
 }
-
 .header .subtitle {
-  font-size: 0.9rem;
-  color: var(--ink-light);
-  font-family: 'Noto Sans SC', sans-serif;
-  letter-spacing: 0.05em;
+  font-family: var(--font-sans);
+  font-size: 0.85rem; color: var(--text-secondary); letter-spacing: 0.04em;
+}
+.header-divider {
+  width: 40px; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 24px auto 0;
 }
 
-/* Controls */
-.controls {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 28px;
+/* STATS */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px; margin-bottom: 28px;
+}
+.stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 14px; text-align: center;
+  transition: border-color 0.25s var(--ease-out);
+}
+.stat-card:hover { border-color: var(--border-light); }
+.stat-value {
+  font-family: var(--font-display);
+  font-size: 1.6rem; font-weight: 600;
+  line-height: 1; margin-bottom: 4px;
+}
+.stat-card.total .stat-value { color: var(--gold); }
+.stat-card.answered .stat-value { color: var(--gold); }
+.stat-card.success .stat-value { color: var(--jade); }
+.stat-card.danger .stat-value { color: var(--vermilion); }
+.stat-label {
+  font-family: var(--font-sans);
+  font-size: 0.7rem; color: var(--text-muted); letter-spacing: 0.05em;
 }
 
-.btn {
-  font-family: 'Noto Sans SC', sans-serif;
-  font-size: 0.9rem;
-  padding: 10px 24px;
-  border: 1.5px solid var(--border);
-  border-radius: 4px;
+/* MODE */
+.mode-bar {
+  display: flex; gap: 8px; justify-content: center;
+  margin-bottom: 24px; flex-wrap: wrap;
+}
+.mode-btn {
+  font-family: var(--font-sans);
+  font-size: 0.78rem; font-weight: 500;
+  padding: 7px 18px; border-radius: 50px;
+  border: 1px solid var(--border);
+  background: transparent; color: var(--text-secondary);
   cursor: pointer;
-  transition: all 0.2s;
-  background: var(--paper);
-  color: var(--ink);
+  transition: all 0.2s var(--ease-out);
   letter-spacing: 0.03em;
 }
+.mode-btn:hover { border-color: var(--gold-dim); color: var(--gold); background: var(--gold-glow); }
+.mode-btn.active { background: var(--gold); color: #0c0c14; border-color: var(--gold); font-weight: 600; }
+.mode-btn.reset-btn { border-color: transparent; color: var(--text-muted); }
+.mode-btn.reset-btn:hover { border-color: var(--border-light); color: var(--text-secondary); background: var(--bg-hover); }
 
-.btn:hover {
-  border-color: var(--vermilion);
-  color: var(--vermilion);
-  background: #fdf8f0;
-}
-
-.btn.active {
-  background: var(--vermilion);
-  color: #fff;
-  border-color: var(--vermilion);
-}
-
-.btn-small {
-  padding: 6px 16px;
-  font-size: 0.8rem;
-}
-
-/* Stats bar */
-.stats {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 20px;
-  background: rgba(255,255,255,0.6);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  margin-bottom: 24px;
-  font-family: 'Noto Sans SC', sans-serif;
-  font-size: 0.85rem;
-  color: var(--ink-light);
-}
-
-.stats .score {
-  font-weight: 600;
-  color: var(--vermilion);
-  font-size: 1rem;
-}
-
-.stats .progress {
-  color: var(--ink);
-}
-
-/* Progress bar */
+/* PROGRESS */
+.progress-wrap { margin-bottom: 28px; }
 .progress-bar {
-  height: 4px;
-  background: var(--border);
-  border-radius: 2px;
-  margin-bottom: 24px;
-  overflow: hidden;
+  height: 2px; background: var(--border);
+  border-radius: 1px; overflow: hidden;
 }
-
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--vermilion), #d4534a);
-  transition: width 0.4s ease;
-  border-radius: 2px;
+  background: linear-gradient(90deg, var(--gold-dim), var(--gold), var(--gold-dim));
+  transition: width 0.5s var(--ease-out);
+  border-radius: 1px;
+}
+.progress-label {
+  display: flex; justify-content: space-between;
+  margin-top: 6px;
+  font-family: var(--font-sans);
+  font-size: 0.68rem; color: var(--text-muted); letter-spacing: 0.04em;
 }
 
-/* Question card */
-.card {
-  background: rgba(255,255,255,0.75);
+/* CARD */
+.q-card {
+  background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 32px 28px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 12px var(--shadow);
-  position: relative;
-  overflow: hidden;
+  border-radius: var(--radius-lg);
+  padding: 32px 30px;
+  position: relative; overflow: hidden;
+  transition: border-color 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out);
+  animation: cardIn 0.4s var(--ease-out);
 }
+@keyframes cardIn { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
 
-.card::before {
+.q-card::before {
   content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 4px;
-  height: 100%;
-  background: var(--gold);
+  position: absolute; top:0; left:0;
+  width: 100%; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
+  opacity: 0.5;
+}
+.q-card.correct { border-color: var(--jade-dim); box-shadow: 0 0 30px var(--jade-glow); }
+.q-card.correct::before { background: linear-gradient(90deg, transparent, var(--jade), transparent); }
+.q-card.wrong { border-color: var(--vermilion-dim); box-shadow: 0 0 30px var(--vermilion-glow); }
+.q-card.wrong::before { background: linear-gradient(90deg, transparent, var(--vermilion), transparent); }
+
+.q-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+.q-index {
+  font-family: var(--font-display);
+  font-size: 0.75rem; font-weight: 600;
+  color: var(--gold);
+  background: var(--gold-glow);
+  border: 1px solid var(--gold-dim);
+  padding: 3px 12px; border-radius: 50px;
+  letter-spacing: 0.06em; white-space: nowrap;
+}
+.q-index::before { content: 'NO.'; font-size: 0.6rem; opacity: 0.6; margin-right: 2px; }
+
+.q-text {
+  font-family: var(--font-serif);
+  font-size: 1.12rem; font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.85; letter-spacing: 0.02em;
 }
 
-.card.correct {
-  border-color: var(--jade);
-  background: var(--jade-light);
-}
-
-.card.correct::before { background: var(--jade); }
-
-.card.wrong {
-  border-color: var(--vermilion);
-  background: var(--vermilion-light);
-}
-
-.card.wrong::before { background: var(--vermilion); }
-
-.question-number {
-  font-family: 'Noto Sans SC', sans-serif;
-  font-size: 0.8rem;
-  color: var(--ink-light);
-  margin-bottom: 8px;
-  letter-spacing: 0.05em;
-}
-
-.question-text {
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: var(--ink);
-  margin-bottom: 20px;
-  line-height: 1.9;
-}
-
-/* Options */
-.options {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.option {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px 16px;
+/* OPTIONS */
+.options-list { display: flex; flex-direction: column; gap: 8px; margin-top: 24px; }
+.opt-item {
+  display: flex; align-items: center; gap: 14px;
+  padding: 13px 16px;
   border: 1px solid var(--border);
-  border-radius: 6px;
+  border-radius: var(--radius);
   cursor: pointer;
-  transition: all 0.2s;
-  background: rgba(255,255,255,0.5);
+  transition: all 0.2s var(--ease-out);
+  background: transparent; user-select: none;
 }
-
-.option:hover {
-  border-color: var(--gold);
-  background: var(--gold-light);
-}
-
-.option.selected {
-  border-color: var(--vermilion);
-  background: #fef0f0;
-}
-
-.option.correct-answer {
-  border-color: var(--jade) !important;
-  background: var(--jade-light) !important;
-}
-
-.option.wrong-answer {
-  border-color: var(--vermilion) !important;
-  background: var(--vermilion-light) !important;
-}
-
-.option-letter {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 1.5px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--ink-light);
+.opt-item:hover { border-color: var(--border-light); background: var(--bg-hover); }
+.opt-marker {
+  width: 28px; height: 28px; border-radius: 50%;
+  border: 1.5px solid var(--border-light);
+  display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
-  transition: all 0.2s;
+  font-family: var(--font-sans);
+  font-size: 0.78rem; font-weight: 600;
+  color: var(--text-muted);
+  transition: all 0.2s var(--ease-out);
 }
-
-.option.selected .option-letter {
-  background: var(--vermilion);
-  color: #fff;
-  border-color: var(--vermilion);
-}
-
-.option.correct-answer .option-letter {
-  background: var(--jade);
-  color: #fff;
-  border-color: var(--jade);
-}
-
-.option.wrong-answer .option-letter {
-  background: var(--vermilion);
-  color: #fff;
-  border-color: var(--vermilion);
-}
-
-.option-text {
+.opt-text {
   flex: 1;
-  font-size: 0.95rem;
+  font-family: var(--font-serif);
+  font-size: 0.95rem; color: var(--text-secondary); line-height: 1.65;
+  word-break: break-word;
 }
 
-/* Feedback */
+.opt-item.is-correct { border-color: var(--jade-dim) !important; background: var(--jade-glow) !important; }
+.opt-item.is-correct .opt-marker { background: var(--jade); border-color: var(--jade); color: #fff; }
+.opt-item.is-correct .opt-text { color: var(--jade); }
+
+.opt-item.is-wrong { border-color: var(--vermilion-dim) !important; background: var(--vermilion-glow) !important; }
+.opt-item.is-wrong .opt-marker { background: var(--vermilion); border-color: var(--vermilion); color: #fff; }
+.opt-item.is-wrong .opt-text { color: var(--vermilion); }
+
+/* FEEDBACK */
 .feedback {
-  margin-top: 16px;
-  padding: 12px 16px;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  display: none;
+  margin-top: 18px; padding: 14px 18px;
+  border-radius: var(--radius);
+  font-family: var(--font-sans);
+  font-size: 0.85rem; line-height: 1.65;
+  animation: feedbackIn 0.3s var(--ease-out);
+}
+@keyframes feedbackIn { from { opacity:0; transform:translateY(-6px); } to { opacity:1; transform:translateY(0); } }
+.feedback.correct-fb { background: var(--jade-glow); border: 1px solid var(--jade-dim); color: var(--jade); }
+.feedback.wrong-fb { background: var(--vermilion-glow); border: 1px solid var(--vermilion-dim); color: var(--vermilion); }
+.feedback strong { font-weight: 600; }
+
+/* NEXT */
+.next-area { display: flex; justify-content: center; margin-top: 20px; }
+.btn-next {
+  font-family: var(--font-sans);
+  font-size: 0.85rem; font-weight: 500;
+  padding: 10px 32px; border-radius: 50px;
+  border: 1px solid var(--border-light);
+  background: var(--bg-card); color: var(--text-primary);
+  cursor: pointer; transition: all 0.25s var(--ease-out);
+  letter-spacing: 0.04em;
+}
+.btn-next:hover { border-color: var(--gold); color: var(--gold); background: var(--gold-glow); transform: translateY(-1px); }
+.btn-next:active { transform: translateY(0); }
+
+/* KBD */
+.kbd-hint { text-align: center; margin-top: 14px; font-family: var(--font-sans); font-size: 0.68rem; color: var(--text-muted); }
+.kbd-key {
+  display: inline-block; padding: 2px 7px;
+  border: 1px solid var(--border); border-radius: 4px;
+  font-size: 0.65rem; margin: 0 2px;
+  background: var(--bg-base); color: var(--text-secondary);
 }
 
-.feedback.show {
-  display: block;
-}
+/* END */
+.end-screen { text-align: center; padding: 60px 30px; animation: cardIn 0.5s var(--ease-out); }
+.end-icon { font-family: var(--font-display); font-size: 3rem; font-weight: 700; margin-bottom: 12px; }
+.end-score { font-family: var(--font-display); font-size: 4rem; font-weight: 700; line-height: 1; margin: 16px 0 8px; }
+.end-grade { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; }
+.end-stats { font-family: var(--font-sans); font-size: 0.85rem; color: var(--text-secondary); line-height: 2; margin-bottom: 28px; }
+.end-actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
 
-.feedback.correct-fb {
-  background: var(--jade-light);
-  color: var(--jade);
-  border: 1px solid var(--jade);
-}
-
-.feedback.wrong-fb {
-  background: var(--vermilion-light);
-  color: var(--vermilion);
-  border: 1px solid var(--vermilion);
-}
-
-/* End screen */
-.end-screen {
-  text-align: center;
-  padding: 60px 30px;
-}
-
-.end-screen h2 {
-  font-size: 1.8rem;
-  color: var(--ink);
-  margin-bottom: 12px;
-}
-
-.end-screen .final-score {
-  font-size: 3rem;
-  font-weight: 700;
-  color: var(--vermilion);
-  margin: 20px 0;
-}
-
-.end-screen .stats-detail {
-  font-family: 'Noto Sans SC', sans-serif;
-  color: var(--ink-light);
-  margin-bottom: 32px;
-  line-height: 2;
-}
-
-/* Hiding */
-.hidden { display: none !important; }
-
-/* Footer */
-.footer {
-  text-align: center;
-  padding: 40px 0 20px;
-  color: var(--ink-light);
-  font-size: 0.8rem;
-  font-family: 'Noto Sans SC', sans-serif;
-  border-top: 1px solid var(--border);
-  margin-top: 40px;
-}
+/* FOOTER */
+.footer { text-align: center; padding: 40px 0 0; margin-top: 48px; border-top: 1px solid var(--border); }
+.footer-content { font-family: var(--font-sans); font-size: 0.72rem; color: var(--text-muted); letter-spacing: 0.04em; }
+.footer-dot { display: inline-block; width: 4px; height: 4px; border-radius: 50%; background: var(--gold-dim); margin: 0 10px; vertical-align: middle; }
 
 @media (max-width: 600px) {
-  .container { padding: 12px; }
-  .card { padding: 20px 16px; }
+  .app { padding: 14px 10px 60px; }
   .header h1 { font-size: 1.5rem; }
-  .question-text { font-size: 1rem; }
-}
-
-/* Mode badge */
-.mode-badge {
-  display: inline-block;
-  padding: 2px 10px;
-  border-radius: 3px;
-  font-size: 0.75rem;
-  font-family: 'Noto Sans SC', sans-serif;
-  background: var(--gold-light);
-  color: var(--gold);
-  border: 1px solid var(--gold);
-  margin-left: 8px;
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .stat-value { font-size: 1.3rem; }
+  .q-card { padding: 22px 16px; }
+  .q-text { font-size: 1rem; }
+  .opt-text { font-size: 0.88rem; }
+  .end-score { font-size: 3rem; }
 }
 </style>
 </head>
 <body>
-<div class="container">
-  <div class="header">
+<div class="app">
+  <header class="header">
+    <div class="header-tag">Modern Chinese History</div>
     <h1>中国近现代史纲要</h1>
-    <div class="subtitle">选择题题库练习 · 共 164 题</div>
+    <p class="subtitle">单选题库 · 策展式练习</p>
+    <div class="header-divider"></div>
+  </header>
+
+  <div class="stats-grid">
+    <div class="stat-card total">
+      <div class="stat-value" id="sTotal">0</div>
+      <div class="stat-label">题目总数</div>
+    </div>
+    <div class="stat-card answered">
+      <div class="stat-value" id="sDone">0</div>
+      <div class="stat-label">已作答</div>
+    </div>
+    <div class="stat-card success">
+      <div class="stat-value" id="sCorrect">0</div>
+      <div class="stat-label">正确</div>
+    </div>
+    <div class="stat-card danger">
+      <div class="stat-value" id="sWrong">0</div>
+      <div class="stat-label">错误</div>
+    </div>
   </div>
 
-  <div class="controls" id="controls">
-    <button class="btn active" onclick="setMode('all')">全部刷题</button>
-    <button class="btn" onclick="setMode('random20')">随机 20 题</button>
-    <button class="btn" onclick="setMode('random50')">随机 50 题</button>
-    <button class="btn" onclick="resetQuiz()">🔄 重新开始</button>
+  <div class="mode-bar">
+    <button class="mode-btn active" data-mode="all">全部刷题</button>
+    <button class="mode-btn" data-mode="r20">随机 20 题</button>
+    <button class="mode-btn" data-mode="r50">随机 50 题</button>
+    <button class="mode-btn reset-btn" id="btnReset">↺ 重新开始</button>
   </div>
 
-  <div class="stats" id="stats">
-    <span class="progress">📝 进度：<strong id="progressText">0/0</strong></span>
-    <span class="score">✅ 正确：<strong id="scoreText">0</strong></span>
-    <span>❌ 错误：<strong id="wrongText">0</strong></span>
-  </div>
-
-  <div class="progress-bar">
-    <div class="progress-fill" id="progressFill" style="width:0%"></div>
+  <div class="progress-wrap">
+    <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+    <div class="progress-label">
+      <span>第 <strong id="lblCurrent">1</strong> / <span id="lblTotal">0</span> 题</span>
+      <span>正确率 <strong id="lblPct">0%</strong></span>
+    </div>
   </div>
 
   <div id="quizArea"></div>
-  <div class="footer">近代史纲要选择题库 · 基于教材与真题整理</div>
+
+  <footer class="footer">
+    <p class="footer-content">题库来源：单选题.docx<span class="footer-dot"></span>近代史纲要复习</p>
+  </footer>
 </div>
 
 <script>
-const ALL_QUESTIONS = [{"num": 1, "question": "中国半殖民地半封建社会正式形成的标志是", "answer": "C", "options": [{"letter": "A", "text": "《中英南京条约》"}, {"letter": "B", "text": "《中日马关条约》"}, {"letter": "C", "text": "《辛丑条约》"}, {"letter": "D", "text": "《烟台条约》"}], "type": "single"}, {"num": 2, "question": "反对封建主义、提倡民主与科学的思想启蒙运动是", "answer": "D", "options": [{"letter": "A", "text": "维新变法运动"}, {"letter": "B", "text": "洋务运动"}, {"letter": "C", "text": "五四运动"}, {"letter": "D", "text": "新文化运动"}], "type": "single"}, {"num": 3, "question": "第一次大革命中，国共两党合作的政治基础是", "answer": "A", "options": [{"letter": "A", "text": "新三民主义"}, {"letter": "B", "text": "反对帝国主义"}, {"letter": "C", "text": "反对封建主义"}, {"letter": "D", "text": "反对北洋军阀"}], "type": "single"}, {"num": 4, "question": "1927年8月7日，中共中央在汉口召开紧急会议，会议确定我党的总方针是", "answer": "A", "options": [{"letter": "A", "text": "开展土地革命和武装反抗国民党反动派"}, {"letter": "B", "text": "占领广大建立根据地"}, {"letter": "C", "text": "批判陈独秀右倾机会主义"}, {"letter": "D", "text": "批判共产国际的左倾指示"}], "type": "single"}, {"num": 5, "question": "抗日战争爆发后，中国军队取得的第一次胜利是", "answer": "B", "options": [{"letter": "A", "text": "台儿庄战役"}, {"letter": "B", "text": "平型关战役"}, {"letter": "C", "text": "徐州会战"}, {"letter": "D", "text": "武汉保卫战"}], "type": "single"}, {"num": 6, "question": "为了更好地领导抗日战争，批驳“亡国论”和“速胜论”，在思想上和理论上武装全党、全军和全国人民，毛泽东于1938年5月发表的文章是", "answer": "D", "options": [{"letter": "A", "text": "《论反对日本帝国主义的策略》"}, {"letter": "B", "text": "《中央关于目前政治形势与党的任务决议》"}, {"letter": "C", "text": "《中国共产党致国民党书》"}, {"letter": "D", "text": "《论持久战》"}], "type": "single"}, {"num": 7, "question": "抗日战争胜利后，我国国内的主要矛盾是", "answer": "B", "options": [{"letter": "A", "text": "中国人民同帝国主义国家之间的矛盾"}, {"letter": "B", "text": "中国人民同美国支持的国民党反动派的矛盾"}, {"letter": "C", "text": "农民阶级同地主阶级的矛盾"}, {"letter": "D", "text": "工人阶级同资产阶级的矛盾"}], "type": "single"}, {"num": 8, "question": "1949年9月，中国人民政治协商会议通过的起临时宪法作用的文件是", "answer": "C", "options": [{"letter": "A", "text": "《论人民民主专政》"}, {"letter": "B", "text": "《中国人民政治协商会议组织法》"}, {"letter": "C", "text": "《中国人民政治协商会议共同纲领》"}, {"letter": "D", "text": "《中华人民共和国中央人民政府组织法》"}], "type": "single"}, {"num": 9, "question": "1949年中华人民共和国成立，标志着中国进入了", "answer": "C", "options": [{"letter": "A", "text": "社会主义社会"}, {"letter": "B", "text": "资本主义社会"}, {"letter": "C", "text": "新民主主义社会"}, {"letter": "D", "text": "共产主义社会"}], "type": "single"}, {"num": 10, "question": "中国进入改革开放和社会主义现代化建设的历史新时期的起点是", "answer": "D", "options": [{"letter": "A", "text": "中国共产党第八次全国代表大会"}, {"letter": "B", "text": "林彪反革命集团的覆灭"}, {"letter": "C", "text": "“文化大革命”的结束"}, {"letter": "D", "text": "十一届三中全会"}], "type": "single"}, {"num": 1, "question": "孙中山在《民报》发刊词中，把同盟会的政治纲领解释为", "answer": "C", "options": [{"letter": "A", "text": "反对封建主义"}, {"letter": "B", "text": "反对满族"}, {"letter": "C", "text": "民族主义"}, {"letter": "D", "text": "民权主义"}, {"letter": "E", "text": "民生主义"}], "type": "single", "original_answer": "CDE"}, {"num": 2, "question": "为了全面阐述“工农武装割据”思想，毛泽东于1928年至1930年1月，撰写了一系列的文章，主要有", "answer": "A", "options": [{"letter": "A", "text": "《中国的红色政权为什么能够存在？》"}, {"letter": "B", "text": "《井冈山的斗争》"}, {"letter": "C", "text": "《星星之火，可以燎原》"}, {"letter": "D", "text": "《兴国土地法》   E《湖南农民运动考察报告》"}], "type": "single", "original_answer": "ABC"}, {"num": 3, "question": "中国共产党在革命中战胜敌人的三大法宝是", "answer": "A", "options": [{"letter": "A", "text": "武装斗争"}, {"letter": "B", "text": "统一战线"}, {"letter": "C", "text": "独立自主"}, {"letter": "D", "text": "党的建设"}, {"letter": "E", "text": "人民民主专政"}], "type": "single", "original_answer": "ABD"}, {"num": 4, "question": "社会主义改造给我国带来的变化有", "answer": "A", "options": [{"letter": "A", "text": "社会主义经济在城市和农村都成为占主体的经济"}, {"letter": "B", "text": "消灭了剥削制度"}, {"letter": "C", "text": "消灭了剥削阶级"}, {"letter": "D", "text": "社会主义制度在中国基本确立起来"}, {"letter": "E", "text": "商品经济被消灭"}], "type": "single", "original_answer": "ABCD"}, {"num": 5, "question": "中共八大提出的全国人民的主要任务是", "answer": "B", "options": [{"letter": "A", "text": "正确处理人民内部的矛盾"}, {"letter": "B", "text": "发展社会生产力"}, {"letter": "C", "text": "实现国家工业化"}, {"letter": "D", "text": "逐步满足人民物质文化生活的需要"}, {"letter": "E", "text": "实现“四个现代化”"}], "type": "single", "original_answer": "BD"}, {"num": 1, "question": "中国近代史的起点是", "answer": "B", "options": [{"letter": "A", "text": "虎门销烟"}, {"letter": "B", "text": "第一次鸦片战争"}, {"letter": "C", "text": "第二次鸦片战争"}, {"letter": "D", "text": "八国联军侵华战争"}], "type": "single"}, {"num": 2, "question": "近代中国社会最主要的矛盾是", "answer": "B", "options": [{"letter": "A", "text": "封建主义和人民大众的矛盾"}, {"letter": "B", "text": "帝国主义和中华民族的矛盾"}, {"letter": "C", "text": "无产阶级和资产阶级的矛盾"}, {"letter": "D", "text": "农民阶级和资产阶级的矛盾"}], "type": "single"}, {"num": 3, "question": "近代中国第一个全国性的资产阶级革命政党是", "answer": "C", "options": [{"letter": "A", "text": "兴中会"}, {"letter": "B", "text": "光复会"}, {"letter": "C", "text": "中国同盟会"}, {"letter": "D", "text": "文学社"}], "type": "single"}, {"num": 4, "question": "国共第一次合作，建立革命统一战线的标志是", "answer": "B", "options": [{"letter": "A", "text": "中共二大的召开"}, {"letter": "B", "text": "国民党一大的召开"}, {"letter": "C", "text": "中国共产党三大的召开"}, {"letter": "D", "text": "《孙文越飞宣言》"}], "type": "single"}, {"num": 2, "question": "1905年至1907年，资产阶级革命派与改良派进行论战的主要内容是", "answer": "A", "options": [{"letter": "A", "text": "要不要以革命手段推翻清王朝"}, {"letter": "B", "text": "要不要民主科学"}, {"letter": "C", "text": "要不要推翻帝制，实行共和"}, {"letter": "D", "text": "要不要反对帝国主义"}, {"letter": "E", "text": "要不要社会革命"}], "type": "single", "original_answer": "ACE"}, {"num": 4, "question": "中国共产党在建立抗日民主政权中，实行三三制原则，主要内容是", "answer": "A", "options": [{"letter": "A", "text": "共产党员占三分之一"}, {"letter": "B", "text": "国民党员占三分之一"}, {"letter": "C", "text": "民主党派占三分之一"}, {"letter": "D", "text": "非党的左派进步分子占三分之一"}, {"letter": "E", "text": "中间派人士占三分之一"}], "type": "single", "original_answer": "ADE"}, {"num": 5, "question": "毛泽东指出中国共产党在中国革命中战胜敌人的三大法宝是", "answer": "A", "options": [{"letter": "A", "text": "武装斗争"}, {"letter": "B", "text": "统一战线"}, {"letter": "C", "text": "党的优良作风"}, {"letter": "D", "text": "党的建设"}, {"letter": "E", "text": "人民民主专政"}], "type": "single", "original_answer": "ABD"}, {"num": 6, "question": "第一个五年计划的提前胜利完成，使我国基本上奠定了社会主义工业化的基础，同时完成了", "answer": "B", "options": [{"letter": "A", "text": "对知识分子的社会主义改造"}, {"letter": "B", "text": "对农业的社会主义改造"}, {"letter": "C", "text": "对手工业的社会主义改造"}, {"letter": "D", "text": "对资本主义工商业的社会主义改造"}, {"letter": "E", "text": "对官僚资本的没收"}], "type": "single", "original_answer": "BCD"}, {"num": 7, "question": "1979年3月，邓小平提出必须坚持四项基本原则，这就是", "answer": "B", "options": [{"letter": "A", "text": "坚持发展生产力"}, {"letter": "B", "text": "坚持社会主义道路"}, {"letter": "C", "text": "坚持人民民主专政"}, {"letter": "D", "text": "坚持共产党的领导"}, {"letter": "E", "text": "坚持马克思列宁主义、毛泽东思想"}], "type": "single", "original_answer": "BCDE"}, {"num": 8, "question": "1948年秋，人民解放军发动了三大战役，消灭了国民党的军事主力。这三大战役是", "answer": "B", "options": [{"letter": "A", "text": "渡江战役"}, {"letter": "B", "text": "淮海战役"}, {"letter": "C", "text": "台儿庄战役"}, {"letter": "D", "text": "辽沈战役"}, {"letter": "E", "text": "平津战役"}], "type": "single", "original_answer": "BDE"}, {"num": 9, "question": "以江泽民为核心的中央领导集体，以马克思主义的巨大勇气进行理论创新，逐步形成了“三个代表”重要思想的科学理论。“三个代表”具体指中国共产党", "answer": "A", "options": [{"letter": "A", "text": "代表中国先进生产力的发展要求"}, {"letter": "B", "text": "代表中华民族的最高利益"}, {"letter": "C", "text": "代表中国先进文化的前进方向"}, {"letter": "D", "text": "代表中国最广大人民的根本利益"}, {"letter": "E", "text": "代表中国历史前进的方向"}], "type": "single", "original_answer": "ACD"}, {"num": 10, "question": "科学发展观的基本内涵包括", "answer": "A", "options": [{"letter": "A", "text": "以人为本"}, {"letter": "B", "text": "可持续发展"}, {"letter": "C", "text": "快速发展"}, {"letter": "D", "text": "全面发展"}, {"letter": "E", "text": "协调发展"}], "type": "single", "original_answer": "ABDE"}, {"num": 1, "question": "鸦片战争前在中国占统治地位的社会经济是", "answer": "C", "options": [{"letter": "A", "text": "商品经济"}, {"letter": "B", "text": "皇权经济"}, {"letter": "C", "text": "自然经济"}, {"letter": "D", "text": "手工业经济"}], "type": "single"}, {"num": 2, "question": "清政府在19世纪设立的办理外交、筹办洋务的最高行政机构是", "answer": "C", "options": [{"letter": "A", "text": "外务部"}, {"letter": "B", "text": "洋务局"}, {"letter": "C", "text": "总理各国事务衙门"}, {"letter": "D", "text": "同文馆"}], "type": "single"}, {"num": 3, "question": "1853年冬太平天国颁布的一个以土地制度为核心的社会改革纲领是", "answer": "C", "options": [{"letter": "A", "text": "《中国土地法大纲》"}, {"letter": "B", "text": "《兴国土地法》"}, {"letter": "C", "text": "《天朝田亩制度》"}, {"letter": "D", "text": "《资政新篇》"}], "type": "single"}, {"num": 4, "question": "揭开维新变法运动序幕的事件是(　B　)", "answer": "", "options": [{"letter": "A", "text": "康有为第一次上书"}, {"letter": "B", "text": "公车上书"}, {"letter": "C", "text": "“南学会”创立"}, {"letter": "D", "text": "《孔子改制考》发表"}], "type": "single"}, {"num": 5, "question": "洋务运动之所以没有达到“师夷长技以自强”的目的，是因为", "answer": "B", "options": [{"letter": "C", "text": "外国资本的积压"}, {"letter": "D", "text": "没有相对稳定的“和平环境”"}], "type": "single"}, {"num": 6, "question": "孙中山领导辛亥革命的指导思想是", "answer": "A", "options": [{"letter": "A", "text": "民族主义、民权主义、民生主义"}, {"letter": "B", "text": "驱除鞑虏、恢复中华"}, {"letter": "C", "text": "建立民国、平均地权"}, {"letter": "D", "text": "联俄，联共，扶助农工"}], "type": "single"}, {"num": 7, "question": "第一个中国共产党早期组织建立于", "answer": "A", "options": [{"letter": "A", "text": "上海"}, {"letter": "B", "text": "北京"}, {"letter": "C", "text": "武汉"}, {"letter": "D", "text": "长沙"}], "type": "single"}, {"num": 1, "question": "林则徐领导的禁烟运动", "answer": "B", "options": [{"letter": "A", "text": "是中国禁烟运动的最终胜利"}, {"letter": "B", "text": "销毁了英国和美国商人的大量鸦片"}, {"letter": "C", "text": "显示了反抗外国侵略的坚强决心"}, {"letter": "D", "text": "维护了中华民族的尊严"}, {"letter": "E", "text": "起到了振兴中华的作用"}], "type": "single", "original_answer": "BCDE"}, {"num": 2, "question": "鸦片战争对中国的影响有", "answer": "A", "options": [{"letter": "A", "text": "中国自给自足的封建经济开始逐步解体"}, {"letter": "B", "text": "封建主义和人民大众的矛盾成为最主要的矛盾"}, {"letter": "C", "text": "中国人民从此肩负起了反帝反封建的双重革命任务"}, {"letter": "D", "text": "中国从此进入旧民主主义革命时期"}, {"letter": "E", "text": "中国半殖民地半封建社会由此开端"}], "type": "single", "original_answer": "ACDE"}, {"num": 3, "question": "洋务运动创办的军事工业有", "answer": "A", "options": [{"letter": "A", "text": "江南制造总局"}, {"letter": "B", "text": "福州船政局"}, {"letter": "C", "text": "汉阳铁厂"}, {"letter": "D", "text": "天津机器制造局"}, {"letter": "E", "text": "金陵机器局"}], "type": "single", "original_answer": "ABCD"}, {"num": 4, "question": "下列属于资产阶级革命派团体的是", "answer": "A", "options": [{"letter": "A", "text": "兴中会"}, {"letter": "B", "text": "强学会"}, {"letter": "C", "text": "华兴会"}, {"letter": "D", "text": "光复会"}, {"letter": "E", "text": "日知会"}], "type": "single", "original_answer": "ACDE"}, {"num": 5, "question": "五四运动中积极参加这场斗争的有", "answer": "A", "options": [{"letter": "A", "text": "爱国学生"}, {"letter": "B", "text": "工人阶级"}, {"letter": "C", "text": "商人"}, {"letter": "D", "text": "地主阶级"}, {"letter": "E", "text": "官僚资产阶级"}], "type": "single", "original_answer": "ABC"}, {"num": 6, "question": "“自从有了中国共产党，中国革命的面貌就焕然一新了。”这里的新是指", "answer": "A", "options": [{"letter": "A", "text": "以马克思主义为指导思想"}, {"letter": "B", "text": "以武装斗争为主要手段"}, {"letter": "C", "text": "以无产阶级为革命领导"}, {"letter": "D", "text": "提出民主革命的前途为社会主义"}, {"letter": "E", "text": "以实现共产主义为目标"}], "type": "single", "original_answer": "ACDE"}, {"num": 1, "question": "标志着近代中国开始沦为半殖民地半封建社会的条约是(　C　)", "answer": "", "options": [{"letter": "A", "text": "《天津条约》"}, {"letter": "B", "text": "《北京条约》"}, {"letter": "C", "text": "《南京条约》"}, {"letter": "D", "text": "《望厦条约》"}], "type": "single"}, {"num": 2, "question": "由私人投资创办的中国资本主义工业兴起于", "answer": "B", "options": [{"letter": "A", "text": "两次鸦片战争期间"}, {"letter": "B", "text": "洋务运动期间"}, {"letter": "C", "text": "戊戌变法期间"}, {"letter": "D", "text": "清末“新政”期间"}], "type": "single"}, {"num": 3, "question": "康有为把西方资本主义的政治学说同传统的儒家思想结合，宣传维新变法的道理。这反映出的根本问题是", "answer": "B", "options": [{"letter": "A", "text": "中国的封建顽固势力相当强大"}, {"letter": "B", "text": "中国民族资产阶级具有软弱性"}, {"letter": "C", "text": "中国的封建传统思想根深蒂固"}, {"letter": "D", "text": "中国民族资产阶级日趋成熟"}], "type": "single"}, {"num": 4, "question": "太平天国运动失败的根本原因是", "answer": "A", "options": [{"letter": "C", "text": "在军事策略上屡犯错误"}, {"letter": "D", "text": "对封建王朝打击空前沉重5、洋务运动之所以没有达到“师夷长技以自强”的目的，是因为(B)。"}, {"letter": "A", "text": "沿用传统的生产管理方式"}, {"letter": "B", "text": "局限于引进西方先进科技"}, {"letter": "C", "text": "外国资本的积压"}, {"letter": "D", "text": "没有相对稳定的“和平环境”"}], "type": "single"}, {"num": 7, "question": "中共一大确定的党的中心任务是", "answer": "C", "options": [{"letter": "A", "text": "实现共产主义"}, {"letter": "B", "text": "加强无产阶级国际团结"}, {"letter": "C", "text": "领导和组织工人运动"}, {"letter": "D", "text": "推翻资产阶级政权"}], "type": "single"}, {"num": 1, "question": "近代中国半殖民地半封建社会的主要矛盾是", "answer": "C", "options": [{"letter": "A", "text": "无产阶级同资产阶级的矛盾"}, {"letter": "B", "text": "帝国主义同中国封建势力的矛盾"}, {"letter": "C", "text": "封建主义同人民大众的矛盾"}, {"letter": "D", "text": "帝国主义同中华民族的矛盾"}, {"letter": "E", "text": "地主阶级与农民阶级的矛盾"}], "type": "single", "original_answer": "CD"}, {"num": 2, "question": "鸦片战争后，中华民族面对的历史任务是", "answer": "A", "options": [{"letter": "A", "text": "民族独立"}, {"letter": "B", "text": "人民解放"}, {"letter": "C", "text": "国家繁荣富强"}, {"letter": "D", "text": "人民共同富裕"}, {"letter": "E", "text": "消灭阶级"}], "type": "single", "original_answer": "ABCD"}, {"num": 3, "question": "洋务派在清朝官吏中的主要代表人物有", "answer": "A", "options": [{"letter": "A", "text": "奕訢"}, {"letter": "B", "text": "李鸿章"}, {"letter": "C", "text": "左宗棠"}, {"letter": "D", "text": "张之洞"}, {"letter": "E", "text": "荣禄"}], "type": "single", "original_answer": "ABCD"}, {"num": 4, "question": "下列属于宣传资产阶级民主革命思想的著作有", "answer": "A", "options": [{"letter": "A", "text": "《驳康有为论革命书》"}, {"letter": "B", "text": "《革命军》"}, {"letter": "C", "text": "《猛回头》"}, {"letter": "D", "text": "《警世钟》"}, {"letter": "E", "text": "《新民丛报》"}], "type": "single", "original_answer": "ABCD"}, {"num": 5, "question": "“自从有了中国共产党，中国革命的面貌就焕然一新了。”这里的新指", "answer": "A", "options": [{"letter": "A", "text": "以马克思主义为指导思想"}, {"letter": "B", "text": "以武装斗争为主要手段"}, {"letter": "C", "text": "以无产阶级为革命领导"}, {"letter": "D", "text": "提出民主革命的前途为社会主义"}, {"letter": "E", "text": "以实现共产主义为目标"}], "type": "single", "original_answer": "ACDE"}, {"num": 1, "question": "标志着近代中国开始沦为半殖民地半封建社会的条约是", "answer": "C", "options": [{"letter": "A", "text": "《天津条约》"}, {"letter": "B", "text": "《北京条约》"}, {"letter": "C", "text": "《南京条约》"}, {"letter": "D", "text": "《望厦条约》"}], "type": "single"}, {"num": 2, "question": "“驱除鞑虏，恢复中华，创立民国，平均地权”是", "answer": "D", "options": [{"letter": "A", "text": "兴中会"}, {"letter": "B", "text": "华兴会"}, {"letter": "C", "text": "光复会"}, {"letter": "D", "text": "同盟会"}], "type": "single"}, {"num": 3, "question": "新文化运动兴起的标志是", "answer": "A", "options": [{"letter": "A", "text": "陈独秀创办《新青年》"}, {"letter": "B", "text": "民主和科学口号的提出"}, {"letter": "C", "text": "胡适发表《文学改良刍议》"}, {"letter": "D", "text": "李大钊发表《庶民的胜利》"}], "type": "single"}, {"num": 4, "question": "在1931年毛泽东制定的土地革命路线中，对富农的政策是", "answer": "C", "options": [{"letter": "A", "text": "消灭富农"}, {"letter": "B", "text": "联合富农"}, {"letter": "C", "text": "限制富农"}, {"letter": "D", "text": "保护富农"}], "type": "single"}, {"num": 5, "question": "井冈山根据地的建立与巩固", "answer": "A", "options": [{"letter": "A", "text": "开辟了农村包围城市，武装夺取政权的道路"}, {"letter": "B", "text": "是土地革命战争开始的标志"}, {"letter": "C", "text": "是中国共产党独立领导武装斗争的开端"}, {"letter": "D", "text": "确立了党对军队的绝对领导中国共产党发出“停止内战，一致抗日”的号召是在(B)。"}, {"letter": "A", "text": "蒋介石对中央苏区第四次“围剿”时"}, {"letter": "B", "text": "“何梅协定”签订后"}, {"letter": "C", "text": "瓦窑堡会议期间"}, {"letter": "D", "text": "西安事变发生后"}], "type": "single"}, {"num": 7, "question": "抗战进入相持阶段后，中国人民在华北给日本侵略者沉重打击的一次军事行动是", "answer": "A", "options": [{"letter": "A", "text": "百团大战"}, {"letter": "B", "text": "平型关战役"}, {"letter": "C", "text": "凇沪会战"}, {"letter": "D", "text": "台儿庄战役"}], "type": "single"}, {"num": 8, "question": "解放战争时期制定的《中国土地法大纲》规定", "answer": "A", "options": [{"letter": "A", "text": "没收地主的土地"}, {"letter": "B", "text": "减租减息政策"}, {"letter": "C", "text": "按成份分配土地"}, {"letter": "D", "text": "废除私有制( PS:本题C项颇具迷惑性，土地改革自然要“分配土地”，但决不是仅“按成份分配土地”，而是“按农村人口平均分配土地”。土改后实行的是“耕者有其田”的土地制度，即农民的小私有制，所以，D项也是错误的。正确答案为A。)"}], "type": "single"}, {"num": 9, "question": "中华人民共和国成立后，中国社会开始了", "answer": "C", "options": [{"letter": "A", "text": "从旧民主主义向新民主主义的过渡"}, {"letter": "B", "text": "从资本主义向社会主义的过渡"}, {"letter": "C", "text": "从新民主主义向社会主义的过渡"}, {"letter": "D", "text": "从社会主义向共产主义的过渡"}], "type": "single"}, {"num": 10, "question": "1981年通过《关于建国以来党的若干历史问题的决议》的是", "answer": "C", "options": [{"letter": "A", "text": "中共十一届五中全会"}, {"letter": "B", "text": "中共十二届三中全会"}, {"letter": "C", "text": "中共十一届六中全会"}, {"letter": "D", "text": "中共十二届六中全会"}], "type": "single"}, {"num": 1, "question": "近代列强攻入北京的侵华战争有", "answer": "A", "options": [{"letter": "A", "text": "第二次鸦片战争"}, {"letter": "B", "text": "中日甲午战争"}, {"letter": "C", "text": "中法战争"}, {"letter": "D", "text": "八国联军战争"}, {"letter": "E", "text": "第一次鸦片战争"}], "type": "single", "original_answer": "AD"}, {"num": 2, "question": "洪秀全据以指导太平天国农民革命斗争的理论著作有", "answer": "A", "options": [{"letter": "A", "text": "《原道救世歌》"}, {"letter": "B", "text": "《新学伪经考》"}, {"letter": "C", "text": "《原道醒世训》"}, {"letter": "D", "text": "《原道觉世训》"}, {"letter": "E", "text": "《孔子改制考》"}], "type": "single", "original_answer": "ACD"}, {"num": 3, "question": "资产阶级革命派与改良派之间论战的内容包括", "answer": "C", "options": [{"letter": "A", "text": "要不要学习西方先进的科学技术"}, {"letter": "B", "text": "要不要建立民主共和国"}, {"letter": "C", "text": "要不要实行平均地权"}, {"letter": "D", "text": "要不要以暴力推翻清王朝"}], "type": "single", "original_answer": "CD"}, {"num": 4, "question": "巴黎和会中国外交代表团提出的要求包括", "answer": "A", "options": [{"letter": "A", "text": "废除帝国主义国家在中国的一切特权"}, {"letter": "B", "text": "废除旧中国的一切不平等条约"}, {"letter": "C", "text": "收回大战期间日本夺去的德国在山东的特权"}, {"letter": "D", "text": "取消袁世凯与日本订立的不平等条约“二十一条”"}, {"letter": "E", "text": "拒签和约"}], "type": "single", "original_answer": "ACD"}, {"num": 5, "question": "在1919年至1949年新中国成立以前，压在中国人民身上的“三座大山”是", "answer": "A", "options": [{"letter": "A", "text": "帝国主义"}, {"letter": "B", "text": "封建主义"}, {"letter": "C", "text": "官僚资本主义"}, {"letter": "D", "text": "民族资本主义"}, {"letter": "E", "text": "资本主义"}], "type": "single", "original_answer": "ABC"}, {"num": 6, "question": "1919年爆发的五四运动是在新的社会历史条件下发生的，它具有的历史特点是", "answer": "A", "options": [{"letter": "A", "text": "反帝反封建的彻底性"}, {"letter": "B", "text": "真正的群众运动"}, {"letter": "C", "text": "促进了马克思主义在中国的传播"}, {"letter": "D", "text": "倡导了民主和科学的主题"}, {"letter": "E", "text": "促进了马克思主义与中国工人运动的结合"}], "type": "single", "original_answer": "ABCE"}, {"num": 7, "question": "中国共产党在长征途中召开的遵义会议，集中解决了在当时具有决定意义的", "answer": "D", "options": [{"letter": "A", "text": "政治问题"}, {"letter": "B", "text": "作风问题"}, {"letter": "C", "text": "思想问题"}, {"letter": "D", "text": "军事问题"}, {"letter": "E", "text": "组织问题"}], "type": "single", "original_answer": "DE"}, {"num": 8, "question": "毛泽东在论述中国革命新道路理论时，提出的“工农武装割据”思想的主要内容是", "answer": "B", "options": [{"letter": "A", "text": "统一战线"}, {"letter": "B", "text": "武装斗争"}, {"letter": "C", "text": "土地革命"}, {"letter": "D", "text": "农村根据地建设"}, {"letter": "E", "text": "党的建设"}], "type": "single", "original_answer": "BCD"}, {"num": 9, "question": "1947年6月底，揭开人民解放战争战略进攻的序幕是", "answer": "A", "options": [{"letter": "A", "text": "刘邓大军挺进大别山"}, {"letter": "B", "text": "华东野战军发动济南战役"}, {"letter": "C", "text": "陈粟大军挺进苏鲁豫皖"}, {"letter": "D", "text": "东北野战军发起辽沈战役"}, {"letter": "E", "text": "陈谢兵团挺进豫西"}], "type": "single", "original_answer": "ACE"}, {"num": 10, "question": "中国共产党在过渡时期的总路线和总任务是逐步实现", "answer": "A", "options": [{"letter": "A", "text": "国家的社会主义工业化"}, {"letter": "B", "text": "对农业的社会主义改造"}, {"letter": "C", "text": "对手工业的社会主义改造"}, {"letter": "D", "text": "对资本主义工商业的社会主义改造"}, {"letter": "E", "text": "国家的社会主义现代化"}], "type": "single", "original_answer": "ABCD"}, {"num": 1, "question": "中国近代资本主义", "answer": "A", "options": [{"letter": "C", "text": "是在外国资本主义入侵刺激下产生的"}, {"letter": "D", "text": "从根本上破坏了封建地主土地所有制"}], "type": "single"}, {"num": 2, "question": "戊戌变法运动的突出历史功绩在于", "answer": "C", "options": [{"letter": "A", "text": "挽救民族危亡"}, {"letter": "B", "text": "推行了资本主义的政治改革"}, {"letter": "C", "text": "促进思想启蒙"}, {"letter": "D", "text": "极大发展资本主义经济"}], "type": "single"}, {"num": 3, "question": "辛亥革命失败的根本原因是", "answer": "D", "options": [{"letter": "A", "text": "帝国主义的破坏"}, {"letter": "B", "text": "南京临时政府的涣散和软弱"}, {"letter": "C", "text": "袁世凯的政治欺骗和军事压力"}, {"letter": "D", "text": "资产阶级的软弱性和妥协性"}], "type": "single"}, {"num": 5, "question": "大革命失败后，中国革命能够坚持和发展的根本原因是", "answer": "B", "options": [{"letter": "A", "text": "肃清右倾投降主义路线"}, {"letter": "B", "text": "中国共产党依靠和领导农民进行土地革命"}, {"letter": "C", "text": "纠正“左”倾军事冒险计划"}, {"letter": "D", "text": "建立革命根据地"}], "type": "single"}, {"num": 6, "question": "下列关于遵义会议的表述，不正确的是", "answer": "B", "options": [{"letter": "A", "text": "事实上确立了以毛泽东为核心的正确领导"}, {"letter": "B", "text": "彻底清算了王明“左”倾路线"}, {"letter": "C", "text": "在危急的情况下挽救了党和红军"}, {"letter": "D", "text": "取消了李德的军事最高指挥权"}], "type": "single"}, {"num": 7, "question": "抗日战争爆发后中共建立的第一个敌后抗日根据地是", "answer": "D", "options": [{"letter": "A", "text": "晋绥根据地"}, {"letter": "B", "text": "冀鲁豫根据地"}, {"letter": "C", "text": "苏南根据地"}, {"letter": "D", "text": "晋察冀根据地"}], "type": "single"}, {"num": 8, "question": "“九·一八”事变后，中国共产党及时发表宣言、通电，提出", "answer": "C", "options": [{"letter": "A", "text": "国共两党亲密合作抵抗日寇"}, {"letter": "B", "text": "抗日救国十大纲领"}, {"letter": "C", "text": "以民族革命战争驱逐日本帝国主义"}, {"letter": "D", "text": "建立广泛的抗日民族统一战线"}], "type": "single"}, {"num": 9, "question": "对第三次国内革命战争反蒋斗争第二条战线的准确表述是", "answer": "D", "options": [{"letter": "A", "text": "国统区的学生运动"}, {"letter": "B", "text": "国统区的工农运动"}, {"letter": "C", "text": "国统区的地下斗争"}, {"letter": "D", "text": "国统区的民主运动"}], "type": "single"}, {"num": 10, "question": "1947年解放军开始战略反攻时，国民党军队正在实施的战略是", "answer": "B", "options": [{"letter": "A", "text": "全面进攻解放区"}, {"letter": "B", "text": "重点进攻山东和陕北解放区"}, {"letter": "C", "text": "抢占战略要地和交通线"}, {"letter": "D", "text": "集中兵力防守战略要地"}], "type": "single"}, {"num": 1, "question": "中英《南京条约》的签订，对中国社会产生的影响有", "answer": "A", "options": [{"letter": "A", "text": "英国打开了中国的大门"}, {"letter": "B", "text": "中国开始被卷入资本主义市场"}, {"letter": "C", "text": "封建的自然经济解体加速"}, {"letter": "D", "text": "中国完全丧失了独立自主的主权"}, {"letter": "E", "text": "促进了中国资本主义的发展"}], "type": "single", "original_answer": "ABC"}, {"num": 2, "question": "洋务派在清朝地方官吏中的主要代表人物有", "answer": "B", "options": [{"letter": "A", "text": "奕訢"}, {"letter": "B", "text": "李鸿章"}, {"letter": "C", "text": "左宗棠"}, {"letter": "D", "text": "张之洞"}, {"letter": "E", "text": "荣禄"}], "type": "single", "original_answer": "BCD"}, {"num": 3, "question": "以下关于辛亥革命的评述正确的是", "answer": "A", "options": [{"letter": "A", "text": "使民主共和观念深入人心"}, {"letter": "B", "text": "为民族资本主义发展创造了有利条件"}, {"letter": "C", "text": "建立了资产阶级民主共和国"}, {"letter": "D", "text": "推翻了统治中国2000多年的封建土地制度E鼓舞了亚洲其它各国的民族解放运动"}], "type": "single", "original_answer": "ADE"}, {"num": 4, "question": "中国共产党一成立就展现了新的面貌，主要表现是", "answer": "A", "options": [{"letter": "A", "text": "第一次提出了反帝反封建的民主革命纲领"}, {"letter": "B", "text": "抗击了帝国主义侵略"}, {"letter": "C", "text": "完整地提出了土地革命纲领"}, {"letter": "D", "text": "采取群众路线的方法进行革命"}, {"letter": "E", "text": "找到了农村包围城市，武装夺取政权的民主革命道路"}], "type": "single", "original_answer": "AD"}, {"num": 5, "question": "毛泽东在《论持久战》中科学地预测，中国抗日战争的发展进程将经过", "answer": "A", "options": [{"letter": "A", "text": "战略防御阶段"}, {"letter": "B", "text": "战略退却阶段"}, {"letter": "C", "text": "战略相持阶段"}, {"letter": "D", "text": "战略决战阶段"}, {"letter": "E", "text": "战略反攻阶段"}], "type": "single", "original_answer": "ACE"}, {"num": 6, "question": "针对抗日战争进入相持阶段后统一战线内部出现的危机，中国共产党提出的三大口号是", "answer": "B", "options": [{"letter": "A", "text": "发展进步势力，孤立顽固势力"}, {"letter": "B", "text": "坚持抗战到底，反对中途妥协"}, {"letter": "C", "text": "巩固国内团结，反对内部分裂"}, {"letter": "D", "text": "力求全国进步，反对向后倒退"}, {"letter": "E", "text": "发展进步势力，争取中间势力"}], "type": "single", "original_answer": "BCD"}, {"num": 7, "question": "中国共产党在抗日民族统一战线中坚持的策略总方针是", "answer": "A", "options": [{"letter": "A", "text": "发展进步势力"}, {"letter": "B", "text": "争取中间势力"}, {"letter": "C", "text": "消灭顽固势力"}, {"letter": "D", "text": "孤立顽固势力"}, {"letter": "E", "text": "反对中间势力"}], "type": "single", "original_answer": "ABD"}, {"num": 8, "question": "1948年秋后，人民解放军同国民党军队进行战略决战的三大战役是", "answer": "A", "options": [{"letter": "A", "text": "辽沈战役"}, {"letter": "B", "text": "平津战役"}, {"letter": "C", "text": "济南战役"}, {"letter": "D", "text": "淮海战役"}, {"letter": "E", "text": "渡江战役"}], "type": "single", "original_answer": "ABD"}, {"num": 9, "question": "毛泽东指出，中国共产党在中国革命中战胜敌人主要的法宝是", "answer": "B", "options": [{"letter": "A", "text": "土地革命"}, {"letter": "B", "text": "统一战线"}, {"letter": "C", "text": "武装斗争"}, {"letter": "D", "text": "党的建设"}, {"letter": "E", "text": "独立自主"}], "type": "single", "original_answer": "BCD"}, {"num": 10, "question": "在新民主主义向社会主义过渡时期进行的社会主义改造包括", "answer": "B", "options": [{"letter": "A", "text": "对官僚资本主义的改造"}, {"letter": "B", "text": "对个体农业的改造"}, {"letter": "C", "text": "对个体手工业的改造"}, {"letter": "D", "text": "对资本主义工商业的改造"}], "type": "single", "original_answer": "BCD"}, {"num": 1, "question": "被称为近代中国睁眼看世界的第一人是", "answer": "A", "options": [{"letter": "A", "text": "林则徐"}, {"letter": "B", "text": "孙中山"}, {"letter": "C", "text": "魏源"}, {"letter": "D", "text": "马建忠"}], "type": "single"}, {"num": 2, "question": "洋务运动的指导思想是", "answer": "A", "options": [{"letter": "A", "text": "“中学为体，西学为用”"}, {"letter": "B", "text": "“西学为体，中学为用”"}, {"letter": "C", "text": "“师夷长技以制夷”"}, {"letter": "D", "text": "“物竞天择”、“适者生存”"}], "type": "single"}, {"num": 3, "question": "近代中国第一个领导资产阶级革命的政党是", "answer": "A", "options": [{"letter": "A", "text": "中国同盟会"}, {"letter": "B", "text": "兴中会"}, {"letter": "C", "text": "光复会"}, {"letter": "D", "text": "科学补习所"}], "type": "single"}, {"num": 4, "question": "新文化运动的基本口号是", "answer": "A", "options": [{"letter": "A", "text": "民主和科学"}, {"letter": "B", "text": "民主和自由"}, {"letter": "C", "text": "自由和科学"}, {"letter": "D", "text": "和平与发展"}], "type": "single"}, {"num": 5, "question": "毛泽东提出要“以后要非常注意军事，须知政权是由枪杆子中取得的”的著名论断的会议是", "answer": "D", "options": [{"letter": "A", "text": "中共四大"}, {"letter": "B", "text": "中共五大"}, {"letter": "C", "text": "中共六大"}, {"letter": "D", "text": "八七会议"}], "type": "single"}, {"num": 6, "question": "抗日战争时期，中国共产党的土地政策是(　D)", "answer": "", "options": [{"letter": "A", "text": "没收地主阶级土地"}, {"letter": "B", "text": "消灭富农"}, {"letter": "C", "text": "征收富农多余财产"}, {"letter": "D", "text": "减租减息"}], "type": "single"}, {"num": 7, "question": "新民主主义的前途是", "answer": "D", "options": [{"letter": "A", "text": "共产主义"}, {"letter": "B", "text": "封建主义"}, {"letter": "C", "text": "资本主义"}, {"letter": "D", "text": "社会主义"}], "type": "single"}, {"num": 8, "question": "过渡时期总路线主体是", "answer": "D", "options": [{"letter": "A", "text": "对农业的社会主义改造"}, {"letter": "B", "text": "对手工业的社会主义改造"}, {"letter": "C", "text": "对资本主义工商业的社会主义改造"}, {"letter": "D", "text": "实现国家的社会主义工业化"}], "type": "single"}, {"num": 9, "question": "中共八大上，关于经济体制提出了“三个主体、三个补充”的思想的中共领导人是", "answer": "D", "options": [{"letter": "A", "text": "毛泽东"}, {"letter": "B", "text": "邓小平"}, {"letter": "C", "text": "邓子恢"}, {"letter": "D", "text": "陈云"}], "type": "single"}, {"num": 10, "question": "揭开了社会主义改革开放的序幕，标志着中国从此进入了改革开放和社会主义现代化建设的历史新时期的中央全会是", "answer": "B", "options": [{"letter": "A", "text": "党的十二大"}, {"letter": "B", "text": "十一届三中全会"}, {"letter": "C", "text": "十一届六中全会"}, {"letter": "D", "text": "十二届三中全会"}], "type": "single"}, {"num": 1, "question": "帝国主义列强通过侵略战争和进行武力威胁等,达到了", "answer": "A", "options": [{"letter": "A", "text": "割占中国大片领土"}, {"letter": "B", "text": "强占中国租界"}, {"letter": "C", "text": "强租中国港湾"}, {"letter": "D", "text": "在中国划分势力范围"}, {"letter": "E", "text": "“西方文明传播者”"}], "type": "single", "original_answer": "ABCD"}, {"num": 2, "question": "维新派与守旧派之间论战主要围绕以下三个问题展开", "answer": "A", "options": [{"letter": "A", "text": "要不要变法"}, {"letter": "B", "text": "要不要兴民权、设议院，实行君主立宪"}, {"letter": "C", "text": "要不要废八股、改科举和兴西学"}, {"letter": "D", "text": "要不要改革开放"}, {"letter": "E", "text": "要不要科技创新"}], "type": "single", "original_answer": "ABC"}, {"num": 3, "question": "辛亥革命", "answer": "A", "options": [{"letter": "A", "text": "是一次比较完全意义上的资产阶级民主革命"}, {"letter": "B", "text": "是中国人民为救亡图存、振兴中华而奋起革命的一个里程碑"}, {"letter": "C", "text": "是20世纪中国第一次历史性巨变"}, {"letter": "D", "text": "是一次伟大的思想启蒙运动"}, {"letter": "E", "text": "是一次比较完全意义上的无产阶级民主革命"}], "type": "single", "original_answer": "ABCD"}, {"num": 4, "question": "中国共产党第二次全国代表大会提出的最低纲领是", "answer": "A", "options": [{"letter": "A", "text": "打倒军阀"}, {"letter": "B", "text": "推翻国际帝国主义的压迫"}, {"letter": "C", "text": "统一中国为真正民主共和国"}, {"letter": "D", "text": "走向社会主义"}, {"letter": "E", "text": "实现社会主义、共产主义"}], "type": "single", "original_answer": "ABC"}, {"num": 5, "question": "标志着进入了创造红军的新时期的三大起义是", "answer": "A", "options": [{"letter": "A", "text": "南昌起义"}, {"letter": "B", "text": "百色起义"}, {"letter": "C", "text": "武昌起义"}, {"letter": "D", "text": "广州起义"}, {"letter": "E", "text": "赣东北起义"}], "type": "single", "original_answer": "AD"}, {"num": 6, "question": "抗日民族统一战线中的进步势力，主要有", "answer": "A", "options": [{"letter": "A", "text": "无产阶级"}, {"letter": "B", "text": "农民阶级"}, {"letter": "C", "text": "城市小资产阶级"}, {"letter": "D", "text": "民族资产阶级"}, {"letter": "E", "text": "地方实力派"}], "type": "single", "original_answer": "ABC"}, {"num": 7, "question": "抗日根据地实行的“三三制”原则，指的是", "answer": "A", "options": [{"letter": "A", "text": "共产党员"}, {"letter": "B", "text": "少数民族"}, {"letter": "C", "text": "左派进步分子"}, {"letter": "D", "text": "中间派"}, {"letter": "E", "text": "顽固派"}], "type": "single", "original_answer": "ACD"}, {"num": 8, "question": "我国对个体农业实行社会主义改造必须遵循的原则有", "answer": "A", "options": [{"letter": "A", "text": "自愿互利"}, {"letter": "B", "text": "典型示范"}, {"letter": "C", "text": "国家帮助"}, {"letter": "D", "text": "公私兼顾"}, {"letter": "E", "text": "积极领导"}], "type": "single", "original_answer": "ABC"}, {"num": 9, "question": "1964年12月,周恩来在第三届全国人民代表大会第一会议上,正式宣布把我国建设成为社会主义强国的现代化目标是", "answer": "A", "options": [{"letter": "A", "text": "现代化工业"}, {"letter": "B", "text": "现代化农业"}, {"letter": "C", "text": "现代化商业"}, {"letter": "D", "text": "现代化国防"}, {"letter": "E", "text": "现代科学技术"}], "type": "single", "original_answer": "ABDE"}, {"num": 10, "question": "中国共产党在社会主义初级阶段的基本路线是", "answer": "A", "options": [{"letter": "A", "text": "以经济建设为中心"}, {"letter": "B", "text": "坚持四项基本原则"}, {"letter": "C", "text": "坚持改革开放"}, {"letter": "D", "text": "自力更生，艰苦创业，"}, {"letter": "E", "text": "为把我国建设成为富强、民主、文明的社会主义现代化国家而奋斗"}], "type": "single", "original_answer": "ABCDE"}, {"num": 1, "question": "魏源提出“师夷长技以制夷”的思想著作是", "answer": "A", "options": [{"letter": "A", "text": "《海国图志》"}, {"letter": "B", "text": "《盛世危言》"}, {"letter": "C", "text": "《筹海篇》"}, {"letter": "D", "text": "《夷情备采》"}], "type": "single"}, {"num": 2, "question": "中国民族资产阶级登上政治舞台的第一次表演是", "answer": "A", "options": [{"letter": "A", "text": "戊戌维新"}, {"letter": "B", "text": "太平天国"}, {"letter": "C", "text": "辛亥革命"}, {"letter": "D", "text": "义和团运动"}], "type": "single"}, {"num": 3, "question": "《中华民国临时约法》是中国历史上第一部具有", "answer": "A", "options": [{"letter": "A", "text": "资产阶级共和国宪法性质的法典"}, {"letter": "B", "text": "资产阶级共和国民法性质的法典"}, {"letter": "C", "text": "无产阶级共和国宪法性质的法典"}, {"letter": "D", "text": "资产阶级共和国经济法性质的法典"}], "type": "single"}, {"num": 4, "question": "在中国大地上率先举起马克思主义思想旗帜的是", "answer": "A", "options": [{"letter": "A", "text": "李大钊"}, {"letter": "B", "text": "陈独秀"}, {"letter": "C", "text": "李达"}, {"letter": "D", "text": "毛泽东"}], "type": "single"}, {"num": 5, "question": "下列选项中,结束了王明“左”倾冒险主义在党中央的统治的会议", "answer": "A", "options": [{"letter": "A", "text": "遵议会议"}, {"letter": "B", "text": "古田会议"}, {"letter": "C", "text": "中共六大"}, {"letter": "D", "text": "中共四大"}], "type": "single"}, {"num": 6, "question": "全民族抗战以来中国军队的第一次重大胜利是", "answer": "A", "options": [{"letter": "A", "text": "平型关大捷"}, {"letter": "B", "text": "台儿庄战役"}, {"letter": "C", "text": "淞沪抗战"}, {"letter": "D", "text": "百团大战"}], "type": "single"}, {"num": 7, "question": "1947年7月至9月，中国共产党在河北省平山县召开全国土地会议，制定和通过了", "answer": "A", "options": [{"letter": "A", "text": "《中国土地法大纲》"}, {"letter": "B", "text": "《井冈山土地法》"}, {"letter": "C", "text": "《兴国土地法》"}, {"letter": "D", "text": "《关于清算、减租及土地问题的指示》"}], "type": "single"}, {"num": 8, "question": "新民主主义革命阶段的基本结束和社会主义革命阶段的开始的标志是", "answer": "A", "options": [{"letter": "A", "text": "中华人民共和国成立"}, {"letter": "B", "text": "三大改造完成"}, {"letter": "C", "text": "中共七届二中全会"}, {"letter": "D", "text": "中共七届三中全会"}], "type": "single"}, {"num": 9, "question": "中国共产党探索中国自已建设社会主义道路开始的标志是", "answer": "A", "options": [{"letter": "A", "text": "1956年中共八大的召开"}, {"letter": "B", "text": "1956年《论十大关系》的发表"}, {"letter": "C", "text": "1953年社会主义三大改造的开始"}, {"letter": "D", "text": "1952年国民经济恢复的完成"}], "type": "single"}, {"num": 10, "question": "科学发展观的核心是", "answer": "A", "options": [{"letter": "A", "text": "以人为本"}, {"letter": "B", "text": "统筹兼顾"}, {"letter": "C", "text": "第一要义是发展"}, {"letter": "D", "text": "构建和谐社会"}], "type": "single"}, {"num": 1, "question": "从1840年至1919年的80年间，中国人民对外来侵略进行了英勇顽强的反抗，但都是以中国失败而告终。其根本原因是", "answer": "A", "options": [{"letter": "A", "text": "社会制度的腐败"}, {"letter": "B", "text": "经济技术的落后"}, {"letter": "C", "text": "文化教育落后"}, {"letter": "D", "text": "反抗决心不强"}, {"letter": "E", "text": "武器装配落后"}], "type": "multi"}, {"num": 2, "question": "洋务运动失败的原因主要是", "answer": "A", "options": [{"letter": "A", "text": "洋务运动具有封建性"}, {"letter": "B", "text": "洋务运动对西方列强具有依赖性"}, {"letter": "C", "text": "洋务运动具有腐朽性"}, {"letter": "D", "text": "洋务运动具有军事性"}, {"letter": "E", "text": "洋务运动具有妥协性"}], "type": "single", "original_answer": "ABC"}, {"num": 3, "question": "革新派和改良派论战的主要内容是", "answer": "A", "options": [{"letter": "A", "text": "要不要以革命手段推翻清王朝"}, {"letter": "B", "text": "要不要推翻帝制，实行共和"}, {"letter": "C", "text": "要不要社会革命"}, {"letter": "D", "text": "要不要民族革命"}, {"letter": "E", "text": "要不要打倒帝国主义"}], "type": "single", "original_answer": "ABC"}, {"num": 4, "question": "关于新文化运动,下列说法正确的是", "answer": "A", "options": [{"letter": "A", "text": "是一场伟大的思想启蒙运动"}, {"letter": "B", "text": "是一次伟大的思想解放运动"}, {"letter": "C", "text": "给封建专制主义和封建礼教以前所未有的冲击"}, {"letter": "D", "text": "为西方的社会科学、自然科学的传入敞开了大门"}, {"letter": "E", "text": "为马克思列宁主义的引进与传播创造了有利条件"}], "type": "single", "original_answer": "ABCDE"}, {"num": 5, "question": "毛泽东在《〈共产党人〉发刊词》中指出中国革命的基本武器是", "answer": "B", "options": [{"letter": "A", "text": "党的领导"}, {"letter": "B", "text": "统一战线"}, {"letter": "C", "text": "武装斗争"}, {"letter": "D", "text": "根据地建设"}, {"letter": "E", "text": "土地革命"}], "type": "single", "original_answer": "BC"}, {"num": 6, "question": "抗战胜利后，中国共产党为避免内站，实现和平建国，于1945年8月在对时局的宣言中明确提出的口号是", "answer": "A", "options": [{"letter": "A", "text": "和平"}, {"letter": "B", "text": "统一"}, {"letter": "C", "text": "进步"}, {"letter": "D", "text": "民主"}, {"letter": "E", "text": "团结"}], "type": "single", "original_answer": "ADE"}, {"num": 7, "question": "1949年10月1日,中华人民共和国的成立标志着", "answer": "A", "options": [{"letter": "A", "text": "中国新民主主义革命基本胜利"}, {"letter": "B", "text": "中国进入了社会主义社会"}, {"letter": "C", "text": "中国进入了新民主主义社会"}, {"letter": "D", "text": "半殖民地半封建社会的结束"}, {"letter": "E", "text": "新民主主义社会向社会主义转变的开始"}], "type": "single", "original_answer": "ACD"}, {"num": 8, "question": "在社会主义改造过程中，中国共产党创造的对民族资本主义企业实行的“四马分肥”办法指的是", "answer": "A", "options": [{"letter": "A", "text": "国家所得税"}, {"letter": "B", "text": "资本家利润"}, {"letter": "C", "text": "企业公积金"}, {"letter": "D", "text": "股金分红"}, {"letter": "E", "text": "工人福利费"}], "type": "single", "original_answer": "ABCE"}, {"num": 9, "question": "中共八大上,陈云提出“三个主体、三个补充”的思想，即", "answer": "A", "options": [{"letter": "A", "text": "国家经营和集体经营是主体，一定数量的个体经营为补充"}, {"letter": "B", "text": "计划生产是主体，一定范围的自由生产为补充"}, {"letter": "C", "text": "国家市场是主体，一定范围的自由市场为补充"}, {"letter": "D", "text": "市场经济为主体,一定范围计划经济为补充"}, {"letter": "E", "text": "国家市场为主体,资本主义市场为补充"}], "type": "single", "original_answer": "ABC"}, {"num": 10, "question": "毛泽东《关于正确处理人民内部矛盾的问题》中，将社会主义矛盾分为", "answer": "A", "options": [{"letter": "A", "text": "敌我矛盾"}, {"letter": "B", "text": "人民内部矛盾"}, {"letter": "C", "text": "尖锐矛盾"}, {"letter": "D", "text": "主要矛盾"}, {"letter": "E", "text": "次要矛盾"}], "type": "single", "original_answer": "AB"}, {"num": 1, "question": "中国近代史上第一个不平等条约是", "answer": "B", "options": [{"letter": "A", "text": "《中英北京条约》"}, {"letter": "B", "text": "《中英南京条约》"}, {"letter": "C", "text": "《马关条约》"}, {"letter": "D", "text": "《辛丑条约》"}], "type": "single"}, {"num": 2, "question": "《资政新篇》是一个", "answer": "A", "options": [{"letter": "A", "text": "具有鲜明资本主义色彩的方案"}, {"letter": "B", "text": "具有鲜明封建主义色彩的方案"}, {"letter": "C", "text": "具有鲜明小资产阶级色彩的方案"}, {"letter": "D", "text": "具有鲜明社会主义色彩的方案"}], "type": "single"}, {"num": 3, "question": "孙中山提出的三民主义之民族主义的内容包括", "answer": "A", "options": [{"letter": "A", "text": "驱除鞑虏，恢复中华"}, {"letter": "B", "text": "平均地权"}, {"letter": "C", "text": "创立民国"}, {"letter": "D", "text": "实现共和"}], "type": "single"}, {"num": 4, "question": "标志着第一次国共合作的正式形成的是", "answer": "A", "options": [{"letter": "A", "text": "国民党一大的成功召开"}, {"letter": "B", "text": "国民党二大的成功召开"}, {"letter": "C", "text": "国民党三大的成功召开"}, {"letter": "D", "text": "中共三大的召开5．中国共产党人创建了第一个农村革命根据地是(A)。"}, {"letter": "A", "text": "井冈山革命根据地"}, {"letter": "B", "text": "赣南革命根据地"}, {"letter": "C", "text": "赣东北革命根据地"}, {"letter": "D", "text": "东固革命根据地"}], "type": "single"}, {"num": 6, "question": "抗日战争时期，中国共产党领导的各抗日根据地实行的政权形式是", "answer": "B", "options": [{"letter": "A", "text": "联合政府"}, {"letter": "B", "text": "“三三制”政权"}, {"letter": "C", "text": "共产党一党专政"}, {"letter": "D", "text": "国共作政府"}], "type": "single"}, {"num": 7, "question": "1949年9月21日，中国人民政治协商会议第一届全体会议在北平中南海怀仁堂隆重开幕，会议通过了", "answer": "A", "options": [{"letter": "A", "text": "《中国人民政治协商会议共同纲领》"}, {"letter": "B", "text": "《中国土地法大纲》"}, {"letter": "C", "text": "《中华人民共和国宪法》"}, {"letter": "D", "text": "《井冈山土地法》"}], "type": "single"}, {"num": 8, "question": "我国对农业手工业进行社会主义改造时采取的方针是", "answer": "A", "options": [{"letter": "A", "text": "积极领导、稳步前进"}, {"letter": "B", "text": "利用、限制"}, {"letter": "C", "text": "鼓励、支持、扶助"}, {"letter": "D", "text": "自愿互利、典型示范、国家帮助"}], "type": "single"}, {"num": 9, "question": "毛泽东提出关于社会主义社会两类社会矛盾学说的著作是", "answer": "B", "options": [{"letter": "A", "text": "《论十大关系》"}, {"letter": "B", "text": "《关于正确处理人民内部矛盾的问题》"}, {"letter": "C", "text": "《论人民民主专政》"}, {"letter": "D", "text": "《再论无产阶级专政的历史经验》"}], "type": "single"}, {"num": 1, "question": "从1840年至1919年的80年间，中国人民对外来侵略进行了英勇顽强的反抗，但都是以中国失败而告终。其原因是", "answer": "A", "options": [{"letter": "A", "text": "社会制度的腐败"}, {"letter": "B", "text": "经济技术的落后"}, {"letter": "C", "text": "文化教育落后"}, {"letter": "D", "text": "反抗决心不强"}, {"letter": "E", "text": "武器装配落后"}], "type": "single", "original_answer": "ABCE"}, {"num": 2, "question": "维新派本身的弱点突出地表现在", "answer": "A", "options": [{"letter": "A", "text": "不敢否定封建主义"}, {"letter": "B", "text": "对帝国主义抱有幻想"}, {"letter": "C", "text": "害怕人民群众"}, {"letter": "D", "text": "革命不彻底性"}, {"letter": "E", "text": "文化水平低"}], "type": "single", "original_answer": "ABC"}, {"num": 4, "question": "关于五四运动,下列说法正确的有", "answer": "B", "options": [{"letter": "A", "text": "是辛亥革命后资产阶级革新派的又一次奋斗"}, {"letter": "B", "text": "是近代中国第一次彻底的反帝反封建的革命运动"}, {"letter": "C", "text": "标志着新民主主义革命的开端"}, {"letter": "D", "text": "为中国共产党有成立作了思想上和干部上的准备"}, {"letter": "E", "text": "开创了“民主、科学、进步、爱国”的五四精神"}], "type": "single", "original_answer": "BCDE"}, {"num": 5, "question": "遵义会议", "answer": "A", "options": [{"letter": "A", "text": "确立了以毛泽东为代表的马克思主义的正确路线在中共中央的领导地位"}, {"letter": "B", "text": "挽救了党、挽救了红军、挽救了中国革命"}, {"letter": "C", "text": "成为中国共产党历史上一个生死攸关的转折点"}, {"letter": "D", "text": "标志着中国共产党在政治上从幼年达到了成熟"}, {"letter": "E", "text": "标志着中国共产党在经济上从幼年达到了成熟"}], "type": "single", "original_answer": "ABCD"}, {"num": 6, "question": "中国共产党在抗日民族统一战线中争取中间势力的条件是", "answer": "A", "options": [{"letter": "A", "text": "共产党要有充足的力量"}, {"letter": "B", "text": "要尊重中间势力的利益"}, {"letter": "C", "text": "对中间势力只能拉拢，不能批评"}, {"letter": "D", "text": "与顽固派坚决斗争并取得胜利"}, {"letter": "E", "text": "对中间势力的要求必须满足，不能拒绝"}], "type": "single", "original_answer": "ABD"}, {"num": 7, "question": "1947年7月至9月，中国共产党在河北省平山县召开全国土地会议，制定和通过了《中国土地法大纲》，明确规定", "answer": "A", "options": [{"letter": "A", "text": "废除封建性及半封建性的土地制度"}, {"letter": "B", "text": "实现耕者有其田的制度"}, {"letter": "C", "text": "乡村中一切地主的土地及公田，由乡村农会接收"}, {"letter": "D", "text": "分配给无地或少地的农民"}, {"letter": "E", "text": "平均地权"}], "type": "single", "original_answer": "ABCD"}, {"num": 8, "question": "在农业合作化过程中，党和政府领导农民创造的过渡形式有", "answer": "A", "options": [{"letter": "A", "text": "临时农业生产组"}, {"letter": "B", "text": "农业生产互助组"}, {"letter": "C", "text": "初级农业生产合作社"}, {"letter": "D", "text": "高级农业生产合作社"}, {"letter": "E", "text": "人民公社"}], "type": "single", "original_answer": "ABCD"}, {"num": 9, "question": "关于社会主义社会两类矛盾的学说，下列说法正确的是", "answer": "A", "options": [{"letter": "A", "text": "这两类矛盾是敌我矛盾和人民内部矛盾"}, {"letter": "B", "text": "敌我矛盾是对抗性矛盾"}, {"letter": "C", "text": "人民内部矛盾是非对抗性矛盾"}, {"letter": "D", "text": "两类矛盾的性质不同,但解决的方法却相同"}, {"letter": "E", "text": "两类矛盾的性质不同,解决的方法也不同"}], "type": "single", "original_answer": "ABCE"}, {"num": 10, "question": "毛泽东思想的活的灵魂，是贯穿于毛泽东思想科学体系的立场、观点和方法，即", "answer": "A", "options": [{"letter": "A", "text": "实事求是"}, {"letter": "B", "text": "群众路线"}, {"letter": "C", "text": "独立自主"}, {"letter": "D", "text": "与时俱进"}, {"letter": "E", "text": "求真务实"}], "type": "single", "original_answer": "ABC"}, {"num": 1, "question": "在近代中国社会的诸矛盾中，最主要的是", "answer": "A", "options": [{"letter": "A", "text": "帝国主义和中华民族的矛盾"}, {"letter": "B", "text": "封建主义和人民大众的矛盾"}, {"letter": "C", "text": "资产阶级和无产阶级的矛盾"}, {"letter": "D", "text": "反动统治阶级内部的矛盾"}], "type": "single"}, {"num": 2, "question": "近代提出“师夷长技以制夷”先进思想的人是", "answer": "C", "options": [{"letter": "A", "text": "林则徐"}, {"letter": "B", "text": "龚自珍"}, {"letter": "C", "text": "魏源"}, {"letter": "D", "text": "郑观应"}], "type": "single"}, {"num": 3, "question": "近代中国首先提出“振兴中华”口号的是", "answer": "D", "options": [{"letter": "A", "text": "康有为"}, {"letter": "B", "text": "洪秀全"}, {"letter": "C", "text": "林则徐"}, {"letter": "D", "text": "孙中山"}], "type": "single"}, {"num": 4, "question": "第一次国共合作的政治基础和共同纲领是", "answer": "D", "options": [{"letter": "A", "text": "三民主义"}, {"letter": "B", "text": "三大政策"}, {"letter": "C", "text": "中共一大纲领"}, {"letter": "D", "text": "新三民主义"}], "type": "single"}, {"num": 5, "question": "下列选项中，结束了王明“左”倾冒险主义在党中央的统治的会议", "answer": "A", "options": [{"letter": "A", "text": "遵议会议"}, {"letter": "B", "text": "古田会议"}, {"letter": "C", "text": "中共六大"}, {"letter": "D", "text": "中共四大"}], "type": "single"}, {"num": 6, "question": "西安事变的和平解决标志着", "answer": "B", "options": [{"letter": "A", "text": "抗日民族统一战线正式形成"}, {"letter": "B", "text": "十年内战结束，国内和平基本实现"}, {"letter": "C", "text": "逼蒋成功，反蒋失败"}, {"letter": "D", "text": "全民族抗战正式开始"}], "type": "single"}, {"num": 7, "question": "1946年5月4日中国共产党发出", "answer": "D", "options": [{"letter": "A", "text": "《中国土地法大纲》"}, {"letter": "B", "text": "《井冈山土地法》"}, {"letter": "C", "text": "《兴国土地法》"}, {"letter": "D", "text": "《关于清算、减租及土地问题的指示》"}], "type": "single"}, {"num": 8, "question": "抗战胜利后，中间路线的主张实质是", "answer": "B", "options": [{"letter": "A", "text": "走半殖民地半封建社会老路"}, {"letter": "B", "text": "走旧民主主义的道路"}, {"letter": "C", "text": "既非资本主义也非社会主义的路"}, {"letter": "D", "text": "新民主主义的道路"}], "type": "single"}, {"num": 9, "question": "社会主义改造基本完成后，中国共产党的中心任务是", "answer": "C", "options": [{"letter": "A", "text": "调动一切积极因素，为社会主义事业服务"}, {"letter": "B", "text": "正确处理人民内部矛盾，巩固社会主义制度"}, {"letter": "C", "text": "集中力量发展生产力，建设社会主义现代化强国"}, {"letter": "D", "text": "加强和改进党的建设，巩固党的执政地位"}], "type": "single"}, {"num": 10, "question": "1978年关于真理标准问题的讨论，是为了解决中国共产党的", "answer": "B", "options": [{"letter": "A", "text": "组织路线问题"}, {"letter": "B", "text": "思想路线问题"}, {"letter": "C", "text": "政治路线问题"}, {"letter": "D", "text": "社会主义初级阶段的基本路线问题"}], "type": "single"}, {"num": 1, "question": "近代中国革命的对象是", "answer": "A", "options": [{"letter": "A", "text": "帝国主义"}, {"letter": "B", "text": "封建主义"}, {"letter": "C", "text": "小资产阶级"}, {"letter": "D", "text": "官僚资本主义"}, {"letter": "E", "text": "民族资产阶级"}], "type": "single", "original_answer": "ABD"}, {"num": 2, "question": "洋务派创办的最大兵工厂是", "answer": "B", "options": [{"letter": "A", "text": "金陵机器局"}, {"letter": "B", "text": "上海江南制造总局"}, {"letter": "C", "text": "北洋水师"}, {"letter": "D", "text": "福州船政局"}, {"letter": "E", "text": "湖北枪炮厂"}], "type": "multi"}, {"num": 3, "question": "同盟会的政治纲领是", "answer": "A", "options": [{"letter": "A", "text": "驱除鞑虏"}, {"letter": "B", "text": "恢复中华"}, {"letter": "C", "text": "创立民国"}, {"letter": "D", "text": "平均地权"}, {"letter": "E", "text": "创立合众政府"}], "type": "single", "original_answer": "ABCD"}, {"num": 5, "question": "毛泽东从理论上系统分析和论证了中国红色政权发生、发展的原因和条件的著作是", "answer": "A", "options": [{"letter": "A", "text": "《中国红色政权为什么能够存在？》"}, {"letter": "B", "text": "《井冈山的斗争》"}, {"letter": "C", "text": "《星星之火，可以燎原》"}, {"letter": "D", "text": "《实践论》"}, {"letter": "E", "text": "《论人民民主专政》"}], "type": "single", "original_answer": "AB"}, {"num": 6, "question": "1938年5、6月间，毛泽东发表《论持久战》", "answer": "A", "options": [{"letter": "A", "text": "阐明的持久战战略思想"}, {"letter": "B", "text": "揭示了抗日战争的发展规律"}, {"letter": "C", "text": "指明了坚持抗战和争取抗战胜利必须实行的战略方针"}, {"letter": "D", "text": "成为中国共产党指导抗日战争的纲领性文献"}, {"letter": "E", "text": "也对全国抗战的战略指导产生了积极的影响"}], "type": "single", "original_answer": "ABCDE"}, {"num": 7, "question": "13.毛泽东在《论人民民主专政》一文中指出人民民主专政的阶级基础是", "answer": "A", "options": [{"letter": "A", "text": "工人阶级"}, {"letter": "B", "text": "农民阶级"}, {"letter": "C", "text": "城市小资产阶级"}, {"letter": "D", "text": "民族资产阶级"}, {"letter": "E", "text": "大资产阶级"}], "type": "single", "original_answer": "AB"}, {"num": 8, "question": "建国后,国家对私人资本主义采取的赎买政策主要通过国家资本主义途径实现，主要有", "answer": "A", "options": [{"letter": "A", "text": "委托加工"}, {"letter": "B", "text": "计划订货"}, {"letter": "C", "text": "公私合营"}, {"letter": "D", "text": "全行业公私合营"}, {"letter": "E", "text": "统购统销"}], "type": "single", "original_answer": "ABE"}, {"num": 9, "question": "中共十一届三中全会前，取得探索中国社会主义建设道路的重要成果有", "answer": "A", "options": [{"letter": "A", "text": "《论十大关系》的发表"}, {"letter": "B", "text": "中共八大的召开及其重要决策"}, {"letter": "C", "text": "《关于正确处理人民内部矛盾的问题》的发表"}, {"letter": "D", "text": "形成了中国特色社会主义建设的理论体系"}, {"letter": "E", "text": "形成了社会主义建设的总路线和基本纲领"}], "type": "single", "original_answer": "ABCE"}, {"num": 10, "question": "1992年，邓小平同志在视察南方的谈话中阐述了一系列重要思想，其中有", "answer": "B", "options": [{"letter": "A", "text": "关于改革党和国家领导制度的思想"}, {"letter": "B", "text": "关于社会主义本质的思想"}, {"letter": "C", "text": "关于计划和市场都是经济手段的思想"}, {"letter": "D", "text": "关于发展才是硬道理的思想"}, {"letter": "E", "text": "关于“三个有利于”的思想"}], "type": "single", "original_answer": "BCDE"}];
+const ALL = [{"question": "鸦片战争之后，最早与中国签订不平等条约的是哪些国家", "answer": "B", "options": [{"letter": "A", "text": "英国、法国、德国"}, {"letter": "B", "text": "英国、法国、美国"}, {"letter": "C", "text": "英国、法国、日本"}, {"letter": "D", "text": "英国、德国、美国"}], "id": 1}, {"question": "下列关于近代中国工人阶级的说法哪一个是不正确的", "answer": "C", "options": [{"letter": "A", "text": "中国工人阶级先于中国资产阶级而产生"}, {"letter": "B", "text": "中国工人阶级身受帝国主义、封建势力和资产阶级三重压迫"}, {"letter": "C", "text": "中国工人阶级是人数最多的被剥削阶级"}, {"letter": "D", "text": "中国工人阶级的革命性是最强的"}], "id": 2}, {"question": "中国近代哪个条约开始允许资本-帝国主义列强在中国办工厂", "answer": "C", "options": [{"letter": "A", "text": "1842年《南京条约》"}, {"letter": "B", "text": "1860年《北京条约》"}, {"letter": "C", "text": "1895年《马关条约》"}, {"letter": "D", "text": "1901年《辛丑条约》"}], "id": 3}, {"question": "中国近代第一个比较系统的发展资本主义的方案是", "answer": "A", "options": [{"letter": "A", "text": "《资政新篇》"}, {"letter": "B", "text": "《天演论》"}, {"letter": "C", "text": "《校邠庐抗议》"}, {"letter": "D", "text": "《中华民国临时约法》"}], "id": 4}, {"question": "清政府兴办洋务运动的目的是什么", "answer": "A", "options": [{"letter": "A", "text": "维护和巩固封建统治"}, {"letter": "B", "text": "使中国成为资产阶级共和国"}, {"letter": "C", "text": "发展中国的民族资本主义"}, {"letter": "D", "text": "使中国成为资产阶级君主立宪国"}], "id": 5}, {"question": "洋务运动失败的标志是下列哪个事件", "answer": "A", "options": [{"letter": "A", "text": "北洋水师的覆灭"}, {"letter": "B", "text": "英法联军火烧圆明园"}, {"letter": "C", "text": "八国联军侵华"}, {"letter": "D", "text": "日俄战争爆发"}], "id": 6}, {"question": "戊戌维新运动的代表人物是下列哪些人", "answer": "B", "options": [{"letter": "A", "text": "李鸿章、张之洞"}, {"letter": "B", "text": "康有为、梁启超"}, {"letter": "C", "text": "孙中山、宋教仁"}, {"letter": "D", "text": "毛泽东、周恩来"}], "id": 7}, {"question": "近代以来，中华民族要争取民族独立和人民解放，首先应该完成什么任务", "answer": "A", "options": [{"letter": "A", "text": "进行反帝反封建的革命"}, {"letter": "B", "text": "进行推翻资本主义的革命"}, {"letter": "C", "text": "废除生产资料私有制"}, {"letter": "D", "text": "实现国家富强与人民富裕"}], "id": 8}, {"question": "近代中国第一个领导资产阶级革命的全国性政党是下列哪一个", "answer": "A", "options": [{"letter": "A", "text": "同盟会"}, {"letter": "B", "text": "兴中会"}, {"letter": "C", "text": "光复会"}, {"letter": "D", "text": "华兴会"}], "id": 9}, {"question": "哪一年孙中山在南京就任临时大总统，改国号为中华民国，并将该年定为民国元年", "answer": "C", "options": [{"letter": "A", "text": "1910年"}, {"letter": "B", "text": "1911年"}, {"letter": "C", "text": "1912年"}, {"letter": "D", "text": "1913年"}], "id": 10}, {"question": "下列关于《中华民国临时约法》的说法哪个是正确的", "answer": "A", "options": [{"letter": "A", "text": "《中华民国临时约法》是资产阶级性质的法典"}, {"letter": "B", "text": "《中华民国临时约法》建立了君主立宪制"}, {"letter": "C", "text": "《中华民国临时约法》确定了北京为中国的首都"}, {"letter": "D", "text": "《中华民国临时约法》废除了封建土地所有制"}], "id": 11}, {"question": "中国新民主主义革命的开端是以哪个事件为标志的", "answer": "A", "options": [{"letter": "A", "text": "五四运动"}, {"letter": "B", "text": "护法运动"}, {"letter": "C", "text": "武昌起义"}, {"letter": "D", "text": "中国共产党成立"}], "id": 12}, {"question": "下列哪个事件推动中国的先进分子从资产阶级民主主义转向社会主义", "answer": "C", "options": [{"letter": "A", "text": "土地革命"}, {"letter": "B", "text": "辛亥革命"}, {"letter": "C", "text": "十月革命"}, {"letter": "D", "text": "甲午战争"}], "id": 13}, {"question": "什么是第一次国共合作时期孙中山实行的三大政策", "answer": "A", "options": [{"letter": "A", "text": "联俄、联共、扶助农工"}, {"letter": "B", "text": "平均地权、节制资本、唤起民众"}, {"letter": "C", "text": "驱逐鞑虏、恢复中华、耕者有其田"}, {"letter": "D", "text": "反帝、反殖、反封建"}], "id": 14}, {"question": "毛泽东在哪次会议上提出“以后要非常注意军事。须知政权是由枪杆子中取得的。”", "answer": "B", "options": [{"letter": "A", "text": "中共一大"}, {"letter": "B", "text": "八七会议"}, {"letter": "C", "text": "遵义会议"}, {"letter": "D", "text": "中共七大"}], "id": 15}, {"question": "中国共产党在哪一次代表大会上首次制定了反帝反封建的革命纲领", "answer": "B", "options": [{"letter": "A", "text": "中共一大"}, {"letter": "B", "text": "中共二大"}, {"letter": "C", "text": "中共三大"}, {"letter": "D", "text": "中共六大"}], "id": 16}, {"question": "1931年11月，中华苏维埃第一次全国代表大会在江西举行，中华苏维埃共和国实行了以下哪些制度", "answer": "B", "options": [{"letter": "A", "text": "“三三制”"}, {"letter": "B", "text": "工农兵代表大会制度"}, {"letter": "C", "text": "“训政”制"}, {"letter": "D", "text": "土地公有制度"}], "id": 17}, {"question": "1927年大革命失败后，国民党实行的一党专政和军事独裁统治代表了哪些阶级的利益", "answer": "D", "options": [{"letter": "A", "text": "地主阶级、城市小资产阶级"}, {"letter": "B", "text": "城市小资产阶级、民族资产阶级"}, {"letter": "C", "text": "地主阶级、民族资产阶级"}, {"letter": "D", "text": "地主阶级、买办性大资产阶级"}], "id": 18}, {"question": "中华民族反抗日本帝国主义侵略的抗战是从什么时候开始的", "answer": "A", "options": [{"letter": "A", "text": "“九一八”事变之后"}, {"letter": "B", "text": "卢沟桥事变之后"}, {"letter": "C", "text": "“一二·九”运动之后"}, {"letter": "D", "text": "“一二·八”事变之后"}], "id": 19}, {"question": "毛泽东在哪篇文章中批驳了“亡国论”“速胜论”等错误观点，系统地阐明了抗日战争的方针", "answer": "C", "options": [{"letter": "A", "text": "《反对本本主义》"}, {"letter": "B", "text": "《井冈山的斗争》"}, {"letter": "C", "text": "《论持久战》"}, {"letter": "D", "text": "《论反对日本帝国主义的策略》"}], "id": 20}, {"question": "“马克思主义中国化“的命题是在中国共产党的哪次会议上提出的", "answer": "B", "options": [{"letter": "A", "text": "遵义会议"}, {"letter": "B", "text": "中共六届六中全会"}, {"letter": "C", "text": "中共二大"}, {"letter": "D", "text": "中共七大"}], "id": 21}, {"question": "中国人民抗日战争胜利的决定因素是什么", "answer": "A", "options": [{"letter": "A", "text": "以爱国主义为核心的民族精神"}, {"letter": "B", "text": "中国共产党的中流砥柱作用"}, {"letter": "C", "text": "国际反法西斯力量的大力支持"}, {"letter": "D", "text": "全民族同仇敌忾的坚决抗战"}], "id": 22}, {"question": "抗日战争时期中国共产党的整风运动主要通过反对什么现象来树立马克思主义作风", "answer": "A", "options": [{"letter": "A", "text": "反对主观主义、宗派主义、党八股"}, {"letter": "B", "text": "反对右倾主义、宗派主义、主观主义"}, {"letter": "C", "text": "反贪污、反浪费、反官僚主义"}, {"letter": "D", "text": "反对左倾主义、右倾主义、机会主义"}], "id": 23}, {"question": "1946年5月4日，中共中央决定将土地政策做出怎样的重大调整", "answer": "A", "options": [{"letter": "A", "text": "实行“耕者有其田”政策"}, {"letter": "B", "text": "实行减租减息政策"}, {"letter": "C", "text": "实行“抽多补少，抽肥补瘦”政策"}, {"letter": "D", "text": "实行消灭富农和中农的政策"}], "id": 24}, {"question": "下列关于新中国的国体的说法哪个是不正确的", "answer": "D", "options": [{"letter": "A", "text": "新中国的政权是由无产阶级领导的"}, {"letter": "B", "text": "新中国的政权以工农联盟为基础"}, {"letter": "C", "text": "新中国的政权的性质是人民民主专政"}, {"letter": "D", "text": "新中国的政权的性质是联邦制"}], "id": 25}, {"question": "1945年8月28日至10月10日，毛泽东等共产党人在重庆与国民党当局进行谈判，并形成了“双十协定”，确认了什么方针", "answer": "A", "options": [{"letter": "A", "text": "确认了和平建国的基本方针"}, {"letter": "B", "text": "确认了国共两党第二次合作的方针"}, {"letter": "C", "text": "确认了开辟第二条战线的方针"}, {"letter": "D", "text": "确认了建立统一战线的方针"}], "id": 26}, {"question": "新中国成立之初，哪份文件起着新中国临时宪法的作用", "answer": "C", "options": [{"letter": "A", "text": "《国内和平协定》"}, {"letter": "B", "text": "《论人民民主专政》"}, {"letter": "C", "text": "《中国人民政治协商会议共同纲领》"}, {"letter": "D", "text": "《双十协定》"}], "id": 27}, {"question": "中国从什么时候开始进入社会主义初级阶段", "answer": "C", "options": [{"letter": "A", "text": "1949年中华人民共和国成立"}, {"letter": "B", "text": "1953年社会主义改造开始"}, {"letter": "C", "text": "1956年社会主义改造完成"}, {"letter": "D", "text": "1978年改革开放拉开帷幕"}], "id": 28}, {"question": "抗战胜利后，中国的民主党派提出了“第三条道路”，下列说法哪个是正确的", "answer": "D", "options": [{"letter": "A", "text": "第三条道路是代表工人和农民利益的道路"}, {"letter": "B", "text": "第三条道路是新民主主义的道路"}, {"letter": "C", "text": "第三条道路得到了国民党当局的认可"}, {"letter": "D", "text": "第三条道路是建立资产阶级共和国的道路"}], "id": 29}, {"question": "新中国“一五”计划确定的经济建设指导方针突出了哪些核心要点", "answer": "B", "options": [{"letter": "A", "text": "集中力量发展交通运输业、轻工业、农业和商业"}, {"letter": "B", "text": "集中力量发展重工业，建立国家工业和国防现代化的初步基础"}, {"letter": "C", "text": "按照自愿和互利的原则，发展农村劳动互助的积极性"}, {"letter": "D", "text": "发展以加工订货、经销代销为主的初级形式国家资本主义"}], "id": 30}, {"question": "哪篇文章标志着以毛泽东为代表的中国共产党人开始探索中国自己的社会主义建设道路", "answer": "A", "options": [{"letter": "A", "text": "《论十大关系》"}, {"letter": "B", "text": "《论人民民主专政》"}, {"letter": "C", "text": "《论联合政府》"}, {"letter": "D", "text": "《新民主主义论》"}], "id": 31}, {"question": "下列哪一事件标志着“文化大革命”的结束", "answer": "D", "options": [{"letter": "A", "text": "“二月逆流”事件"}, {"letter": "B", "text": "“五一六通知”发布"}, {"letter": "C", "text": "“十六条”发布"}, {"letter": "D", "text": "华国锋、叶剑英等粉碎“四人帮”"}], "id": 32}, {"question": "我国在什么时期成为了世界第二大经济体", "answer": "D", "options": [{"letter": "A", "text": "1956年完成社会主义改造时"}, {"letter": "B", "text": "1978年开始改革开放时"}, {"letter": "C", "text": "2008年主办奥运会时"}, {"letter": "D", "text": "2010年经济总量超过日本时"}], "id": 33}, {"question": "下列关于坚持四项基本原则的说法哪一个是正确的", "answer": "C", "options": [{"letter": "A", "text": "坚持马列主义毛泽东思想、坚持社会主义道路、坚持两个凡是、坚持党的领导"}, {"letter": "B", "text": "坚持社会主义道路、坚持党的领导、坚持改革开放、坚持马列主义毛泽东思想"}, {"letter": "C", "text": "坚持社会主义道路、坚持人民民主专政、坚持党的领导、坚持马列主义毛泽东思想"}, {"letter": "D", "text": "坚持人民民主专政、坚持马列主义毛泽东思想、坚持党的领导、坚持市场经济"}], "id": 34}, {"question": "下列哪一次会议确立了社会主义市场经济体制的改革目标", "answer": "C", "options": [{"letter": "A", "text": "中国共产党第十一次全国代表大会"}, {"letter": "B", "text": "中国共产党第十一届三中全会"}, {"letter": "C", "text": "中国共产党第十四次全国代表大会"}, {"letter": "D", "text": "中国共产党第十四届三中全会"}], "id": 35}, {"question": "中国共产党第十三次全国代表大会确定了“一个中心、两个基本点”的基本路线，其中“一个中心”的含义是", "answer": "A", "options": [{"letter": "A", "text": "以经济建设为中心"}, {"letter": "B", "text": "以阶级斗争为中心"}, {"letter": "C", "text": "以四项基本原则为中心"}, {"letter": "D", "text": "以社会主义初级阶段为中心"}], "id": 36}, {"question": "谁最早提出“一个国家、两种制度”的概念，是在什么时间提出的", "answer": "A", "options": [{"letter": "A", "text": "邓小平  1982年"}, {"letter": "B", "text": "邓小平1997年"}, {"letter": "C", "text": "叶剑英  1982年"}, {"letter": "D", "text": "叶剑英    1997年"}], "id": 37}, {"question": "中国特色社会主义“五位一体”的总体布局包括以下哪些内容", "answer": "A", "options": [{"letter": "A", "text": "政治建设、经济建设、文化建设、社会建设、生态文明建设"}, {"letter": "B", "text": "政治建设、经济建设、文化建设、社会建设、军事建设"}, {"letter": "C", "text": "政治建设、经济建设、党的建设、社会建设、生态文明建设"}, {"letter": "D", "text": "政治建设、经济建设、文化建设、社会建设、法治建设"}], "id": 38}, {"question": "中华人民共和国恢复对澳门行使主权是在哪一年", "answer": "D", "options": [{"letter": "A", "text": "1992年"}, {"letter": "B", "text": "1997年"}, {"letter": "C", "text": "1998年"}, {"letter": "D", "text": "1999年"}], "id": 39}, {"question": "中国特色社会主义进入新时代以后，我国社会的主要矛盾是什么", "answer": "A", "options": [{"letter": "A", "text": "人民日益增长的美好生活的需要和不平衡不充分的发展之间的矛盾"}, {"letter": "B", "text": "人民对于经济文化迅速发展的需要同当前经济文化不能满足人民需要的状况之间的矛盾"}, {"letter": "C", "text": "资本主义道路与社会主义道路之间的矛盾"}, {"letter": "D", "text": "社会主义初级阶段的现实与社会主义理想之间的矛盾"}], "id": 40}, {"question": "中国特色社会主义新时代的开启以下列哪个事件为标志", "answer": "C", "options": [{"letter": "A", "text": "中国共产党第十六次全国代表大会召开"}, {"letter": "B", "text": "中国共产党第十七次全国代表大会召开"}, {"letter": "C", "text": "中国共产党第十八次全国代表大会召开"}, {"letter": "D", "text": "中国共产党第十九次全国代表大会召开"}], "id": 41}, {"question": "中国共产党在哪次会议上把习近平新时代中国特色社会主义思想同马克思列宁主义、毛泽东思想、邓小平理论、“三个代表”重要思想、科学发展观一道确立为党的行动指南", "answer": "C", "options": [{"letter": "A", "text": "2007年中国共产党第十七次全国代表大会"}, {"letter": "B", "text": "2012年中国共产党第十八次全国代表大会"}, {"letter": "C", "text": "2017年中国共产党第十九次全国代表大会"}, {"letter": "D", "text": "2022年中国共产党第二十次全国代表大会"}], "id": 42}, {"question": "中国半殖民地半封建社会正式形成的标志是", "answer": "C", "options": [{"letter": "A", "text": "《中英南京条约》"}, {"letter": "B", "text": "《中日马关条约》"}, {"letter": "C", "text": "《辛丑条约》"}, {"letter": "D", "text": "《烟台条约》"}], "id": 43}, {"question": "反对封建主义、提倡民主与科学的思想启蒙运动是", "answer": "D", "options": [{"letter": "A", "text": "维新变法运动"}, {"letter": "B", "text": "洋务运动"}, {"letter": "C", "text": "五四运动"}, {"letter": "D", "text": "新文化运动"}], "id": 44}, {"question": "第一次大革命中，国共两党合作的政治基础是", "answer": "A", "options": [{"letter": "A", "text": "新三民主义"}, {"letter": "B", "text": "反对帝国主义"}, {"letter": "C", "text": "反对封建主义"}, {"letter": "D", "text": "反对北洋军阀"}], "id": 45}, {"question": "1927年8月7日，中共中央在汉口召开紧急会议，会议确定我党的总方针是", "answer": "A", "options": [{"letter": "A", "text": "开展土地革命和武装反抗国民党反动派"}, {"letter": "B", "text": "占领广大建立根据地"}, {"letter": "C", "text": "批判陈独秀右倾机会主义"}, {"letter": "D", "text": "批判共产国际的左倾指示"}], "id": 46}, {"question": "抗日战争爆发后，中国军队取得的第一次胜利是", "answer": "B", "options": [{"letter": "A", "text": "台儿庄战役"}, {"letter": "B", "text": "平型关战役"}, {"letter": "C", "text": "徐州会战"}, {"letter": "D", "text": "武汉保卫战"}], "id": 47}, {"question": "为了更好地领导抗日战争，批驳“亡国论”和“速胜论”，在思想上和理论上武装全党、全军和全国人民，毛泽东于1938年5月发表的文章是", "answer": "D", "options": [{"letter": "A", "text": "《论反对日本帝国主义的策略》"}, {"letter": "B", "text": "《中央关于目前政治形势与党的任务决议》"}, {"letter": "C", "text": "《中国共产党致国民党书》"}, {"letter": "D", "text": "《论持久战》"}], "id": 48}, {"question": "抗日战争胜利后，我国国内的主要矛盾是", "answer": "B", "options": [{"letter": "A", "text": "中国人民同帝国主义国家之间的矛盾"}, {"letter": "B", "text": "中国人民同美国支持的国民党反动派的矛盾"}, {"letter": "C", "text": "农民阶级同地主阶级的矛盾"}, {"letter": "D", "text": "工人阶级同资产阶级的矛盾"}], "id": 49}, {"question": "1949年9月，中国人民政治协商会议通过的起临时宪法作用的文件是", "answer": "C", "options": [{"letter": "A", "text": "《论人民民主专政》"}, {"letter": "B", "text": "《中国人民政治协商会议组织法》"}, {"letter": "C", "text": "《中国人民政治协商会议共同纲领》"}, {"letter": "D", "text": "《中华人民共和国中央人民政府组织法》"}], "id": 50}, {"question": "1949年中华人民共和国成立，标志着中国进入了", "answer": "C", "options": [{"letter": "A", "text": "社会主义社会"}, {"letter": "B", "text": "资本主义社会"}, {"letter": "C", "text": "新民主主义社会"}, {"letter": "D", "text": "共产主义社会"}], "id": 51}, {"question": "中国进入改革开放和社会主义现代化建设的历史新时期的起点是", "answer": "D", "options": [{"letter": "A", "text": "中国共产党第八次全国代表大会"}, {"letter": "B", "text": "林彪反革命集团的覆灭"}, {"letter": "C", "text": "“文化大革命”的结束"}, {"letter": "D", "text": "十一届三中全会"}], "id": 52}, {"question": "中国近代史的起点是", "answer": "B", "options": [{"letter": "A", "text": "虎门销烟"}, {"letter": "B", "text": "第一次鸦片战争"}, {"letter": "C", "text": "第二次鸦片战争"}, {"letter": "D", "text": "八国联军侵华战争"}], "id": 53}, {"question": "近代中国社会最主要的矛盾是", "answer": "B", "options": [{"letter": "A", "text": "封建主义和人民大众的矛盾"}, {"letter": "B", "text": "帝国主义和中华民族的矛盾"}, {"letter": "C", "text": "无产阶级和资产阶级的矛盾"}, {"letter": "D", "text": "农民阶级和资产阶级的矛盾"}], "id": 54}, {"question": "近代中国第一个全国性的资产阶级革命政党是", "answer": "C", "options": [{"letter": "A", "text": "兴中会"}, {"letter": "B", "text": "光复会"}, {"letter": "C", "text": "中国同盟会"}, {"letter": "D", "text": "文学社"}], "id": 55}, {"question": "国共第一次合作，建立革命统一战线的标志是", "answer": "B", "options": [{"letter": "A", "text": "中共二大的召开"}, {"letter": "B", "text": "国民党一大的召开"}, {"letter": "C", "text": "中国共产党三大的召开"}, {"letter": "D", "text": "《孙文越飞宣言》"}], "id": 56}, {"question": "鸦片战争前在中国占统治地位的社会经济是", "answer": "C", "options": [{"letter": "A", "text": "商品经济"}, {"letter": "B", "text": "皇权经济"}, {"letter": "C", "text": "自然经济"}, {"letter": "D", "text": "手工业经济"}], "id": 57}, {"question": "清政府在19世纪设立的办理外交、筹办洋务的最高行政机构是", "answer": "C", "options": [{"letter": "A", "text": "外务部"}, {"letter": "B", "text": "洋务局"}, {"letter": "C", "text": "总理各国事务衙门"}, {"letter": "D", "text": "同文馆"}], "id": 58}, {"question": "1853年冬太平天国颁布的一个以土地制度为核心的社会改革纲领是", "answer": "C", "options": [{"letter": "A", "text": "《中国土地法大纲》"}, {"letter": "B", "text": "《兴国土地法》"}, {"letter": "C", "text": "《天朝田亩制度》"}, {"letter": "D", "text": "《资政新篇》"}], "id": 59}, {"question": "孙中山领导辛亥革命的指导思想是", "answer": "A", "options": [{"letter": "A", "text": "民族主义、民权主义、民生主义"}, {"letter": "B", "text": "驱除鞑虏、恢复中华"}, {"letter": "C", "text": "建立民国、平均地权"}, {"letter": "D", "text": "联俄，联共，扶助农工"}], "id": 60}, {"question": "由私人投资创办的中国资本主义工业兴起于", "answer": "B", "options": [{"letter": "A", "text": "两次鸦片战争期间"}, {"letter": "B", "text": "洋务运动期间"}, {"letter": "C", "text": "戊戌变法期间"}, {"letter": "D", "text": "清末“新政”期间"}], "id": 61}, {"question": "康有为把西方资本主义的政治学说同传统的儒家思想结合，宣传维新变法的道理。这反映出的根本问题是", "answer": "B", "options": [{"letter": "A", "text": "中国的封建顽固势力相当强大"}, {"letter": "B", "text": "中国民族资产阶级具有软弱性"}, {"letter": "C", "text": "中国的封建传统思想根深蒂固"}, {"letter": "D", "text": "中国民族资产阶级日趋成熟"}], "id": 62}, {"question": "中共一大确定的党的中心任务是", "answer": "C", "options": [{"letter": "A", "text": "实现共产主义"}, {"letter": "B", "text": "加强无产阶级国际团结"}, {"letter": "C", "text": "领导和组织工人运动"}, {"letter": "D", "text": "推翻资产阶级政权"}], "id": 63}, {"question": "标志着近代中国开始沦为半殖民地半封建社会的条约是", "answer": "C", "options": [{"letter": "A", "text": "《天津条约》"}, {"letter": "B", "text": "《北京条约》"}, {"letter": "C", "text": "《南京条约》"}, {"letter": "D", "text": "《望厦条约》"}], "id": 64}, {"question": "新文化运动兴起的标志是", "answer": "A", "options": [{"letter": "A", "text": "陈独秀创办《新青年》"}, {"letter": "B", "text": "民主和科学口号的提出"}, {"letter": "C", "text": "胡适发表《文学改良刍议》"}, {"letter": "D", "text": "李大钊发表《庶民的胜利》"}], "id": 65}, {"question": "在1931年毛泽东制定的土地革命路线中，对富农的政策是", "answer": "C", "options": [{"letter": "A", "text": "消灭富农"}, {"letter": "B", "text": "联合富农"}, {"letter": "C", "text": "限制富农"}, {"letter": "D", "text": "保护富农"}], "id": 66}, {"question": "井冈山根据地的建立与巩固", "answer": "A", "options": [{"letter": "A", "text": "开辟了农村包围城市，武装夺取政权的道路"}, {"letter": "B", "text": "是土地革命战争开始的标志"}, {"letter": "C", "text": "是中国共产党独立领导武装斗争的开端"}, {"letter": "D", "text": "确立了党对军队的绝对领导"}], "id": 67}, {"question": "中国共产党发出“停止内战，一致抗日”的号召是在", "answer": "B", "options": [{"letter": "A", "text": "蒋介石对中央苏区第四次“围剿”时"}, {"letter": "B", "text": "“何梅协定”签订后"}, {"letter": "C", "text": "瓦窑堡会议期间"}, {"letter": "D", "text": "西安事变发生后"}], "id": 68}, {"question": "抗战进入相持阶段后，中国人民在华北给日本侵略者沉重打击的一次军事行动是", "answer": "A", "options": [{"letter": "A", "text": "百团大战"}, {"letter": "B", "text": "平型关战役"}, {"letter": "C", "text": "凇沪会战"}, {"letter": "D", "text": "台儿庄战役"}], "id": 69}, {"question": "解放战争时期制定的《中国土地法大纲》规定", "answer": "A", "options": [{"letter": "A", "text": "没收地主的土地"}, {"letter": "B", "text": "减租减息政策"}, {"letter": "C", "text": "按成份分配土地"}, {"letter": "D", "text": "废除私有制"}], "id": 70}, {"question": "中华人民共和国成立后，中国社会开始了", "answer": "C", "options": [{"letter": "A", "text": "从旧民主主义向新民主主义的过渡"}, {"letter": "B", "text": "从资本主义向社会主义的过渡"}, {"letter": "C", "text": "从新民主主义向社会主义的过渡"}, {"letter": "D", "text": "从社会主义向共产主义的过渡"}], "id": 71}, {"question": "1981年通过《关于建国以来党的若干历史问题的决议》的是", "answer": "C", "options": [{"letter": "A", "text": "中共十一届五中全会"}, {"letter": "B", "text": "中共十二届三中全会"}, {"letter": "C", "text": "中共十一届六中全会"}, {"letter": "D", "text": "中共十二届六中全会"}], "id": 72}, {"question": "戊戌变法运动的突出历史功绩在于", "answer": "C", "options": [{"letter": "A", "text": "挽救民族危亡"}, {"letter": "B", "text": "推行了资本主义的政治改革"}, {"letter": "C", "text": "促进思想启蒙"}, {"letter": "D", "text": "极大发展资本主义经济"}], "id": 73}, {"question": "辛亥革命失败的根本原因是", "answer": "D", "options": [{"letter": "A", "text": "帝国主义的破坏"}, {"letter": "B", "text": "南京临时政府的涣散和软弱"}, {"letter": "C", "text": "袁世凯的政治欺骗和军事压力"}, {"letter": "D", "text": "资产阶级的软弱性和妥协性"}], "id": 74}, {"question": "大革命失败后，中国革命能够坚持和发展的根本原因是", "answer": "B", "options": [{"letter": "A", "text": "肃清右倾投降主义路线"}, {"letter": "B", "text": "中国共产党依靠和领导农民进行土地革命"}, {"letter": "C", "text": "纠正“左”倾军事冒险计划"}, {"letter": "D", "text": "建立革命根据地"}], "id": 75}, {"question": "下列关于遵义会议的表述，不正确的是", "answer": "B", "options": [{"letter": "A", "text": "事实上确立了以毛泽东为核心的正确领导"}, {"letter": "B", "text": "彻底清算了王明“左”倾路线"}, {"letter": "C", "text": "在危急的情况下挽救了党和红军"}, {"letter": "D", "text": "取消了李德的军事最高指挥权"}], "id": 76}, {"question": "抗日战争爆发后中共建立的第一个敌后抗日根据地是", "answer": "D", "options": [{"letter": "A", "text": "晋绥根据地"}, {"letter": "B", "text": "冀鲁豫根据地"}, {"letter": "C", "text": "苏南根据地"}, {"letter": "D", "text": "晋察冀根据地"}], "id": 77}, {"question": "“九·一八”事变后，中国共产党及时发表宣言、通电，提出", "answer": "C", "options": [{"letter": "A", "text": "国共两党亲密合作抵抗日寇"}, {"letter": "B", "text": "抗日救国十大纲领"}, {"letter": "C", "text": "以民族革命战争驱逐日本帝国主义"}, {"letter": "D", "text": "建立广泛的抗日民族统一战线"}], "id": 78}, {"question": "对第三次国内革命战争反蒋斗争第二条战线的准确表述是", "answer": "D", "options": [{"letter": "A", "text": "国统区的学生运动"}, {"letter": "B", "text": "国统区的工农运动"}, {"letter": "C", "text": "国统区的地下斗争"}, {"letter": "D", "text": "国统区的民主运动"}], "id": 79}, {"question": "1947年解放军开始战略反攻时，国民党军队正在实施的战略是", "answer": "B", "options": [{"letter": "A", "text": "全面进攻解放区"}, {"letter": "B", "text": "重点进攻山东和陕北解放区"}, {"letter": "C", "text": "抢占战略要地和交通线"}, {"letter": "D", "text": "集中兵力防守战略要地"}], "id": 80}, {"question": "被称为近代中国睁眼看世界的第一人是", "answer": "A", "options": [{"letter": "A", "text": "林则徐"}, {"letter": "B", "text": "孙中山"}, {"letter": "C", "text": "魏源"}, {"letter": "D", "text": "马建忠"}], "id": 81}, {"question": "洋务运动的指导思想是", "answer": "A", "options": [{"letter": "A", "text": "“中学为体，西学为用”"}, {"letter": "B", "text": "“西学为体，中学为用”"}, {"letter": "C", "text": "“师夷长技以制夷”"}, {"letter": "D", "text": "“物竞天择”、“适者生存”"}], "id": 82}, {"question": "近代中国第一个领导资产阶级革命的政党是", "answer": "A", "options": [{"letter": "A", "text": "中国同盟会"}, {"letter": "B", "text": "兴中会"}, {"letter": "C", "text": "光复会"}, {"letter": "D", "text": "科学补习所"}], "id": 83}, {"question": "新文化运动的基本口号是", "answer": "A", "options": [{"letter": "A", "text": "民主和科学"}, {"letter": "B", "text": "民主和自由"}, {"letter": "C", "text": "自由和科学"}, {"letter": "D", "text": "和平与发展"}], "id": 84}, {"question": "毛泽东提出要“以后要非常注意军事，须知政权是由枪杆子中取得的”的著名论断的会议是", "answer": "D", "options": [{"letter": "A", "text": "中共四大"}, {"letter": "B", "text": "中共五大"}, {"letter": "C", "text": "中共六大"}, {"letter": "D", "text": "八七会议"}], "id": 85}, {"question": "新民主主义的前途是", "answer": "D", "options": [{"letter": "A", "text": "共产主义"}, {"letter": "B", "text": "封建主义"}, {"letter": "C", "text": "资本主义"}, {"letter": "D", "text": "社会主义"}], "id": 86}, {"question": "过渡时期总路线主体是", "answer": "D", "options": [{"letter": "A", "text": "对农业的社会主义改造"}, {"letter": "B", "text": "对手工业的社会主义改造"}, {"letter": "C", "text": "对资本主义工商业的社会主义改造"}, {"letter": "D", "text": "实现国家的社会主义工业化"}], "id": 87}, {"question": "中共八大上，关于经济体制提出了“三个主体、三个补充”的思想的中共领导人是", "answer": "D", "options": [{"letter": "A", "text": "毛泽东"}, {"letter": "B", "text": "邓小平"}, {"letter": "C", "text": "邓子恢"}, {"letter": "D", "text": "陈云"}], "id": 88}, {"question": "揭开了社会主义改革开放的序幕，标志着中国从此进入了改革开放和社会主义现代化建设的历史新时期的中央全会是", "answer": "B", "options": [{"letter": "A", "text": "党的十二大"}, {"letter": "B", "text": "十一届三中全会"}, {"letter": "C", "text": "十一届六中全会"}, {"letter": "D", "text": "十二届三中全会"}], "id": 89}, {"question": "魏源提出“师夷长技以制夷”的思想著作是", "answer": "A", "options": [{"letter": "A", "text": "《海国图志》"}, {"letter": "B", "text": "《盛世危言》"}, {"letter": "C", "text": "《筹海篇》"}, {"letter": "D", "text": "《夷情备采》"}], "id": 90}, {"question": "中国民族资产阶级登上政治舞台的第一次表演是", "answer": "A", "options": [{"letter": "A", "text": "戊戌维新"}, {"letter": "B", "text": "太平天国"}, {"letter": "C", "text": "辛亥革命"}, {"letter": "D", "text": "义和团运动"}], "id": 91}, {"question": "《中华民国临时约法》是中国历史上第一部具有", "answer": "A", "options": [{"letter": "A", "text": "资产阶级共和国宪法性质的法典"}, {"letter": "B", "text": "资产阶级共和国民法性质的法典"}, {"letter": "C", "text": "无产阶级共和国宪法性质的法典"}, {"letter": "D", "text": "资产阶级共和国经济法性质的法典"}], "id": 92}, {"question": "在中国大地上率先举起马克思主义思想旗帜的是", "answer": "A", "options": [{"letter": "A", "text": "李大钊"}, {"letter": "B", "text": "陈独秀"}, {"letter": "C", "text": "蔡和森"}, {"letter": "D", "text": "毛泽东"}], "id": 93}, {"question": "下列选项中,结束了王明“左”倾冒险主义在党中央的统治的会议", "answer": "A", "options": [{"letter": "A", "text": "遵议会议"}, {"letter": "B", "text": "古田会议"}, {"letter": "C", "text": "中共六大"}, {"letter": "D", "text": "中共四大"}], "id": 94}, {"question": "全民族抗战以来中国军队的第一次重大胜利是", "answer": "A", "options": [{"letter": "A", "text": "平型关大捷"}, {"letter": "B", "text": "台儿庄战役"}, {"letter": "C", "text": "淞沪抗战"}, {"letter": "D", "text": "百团大战"}], "id": 95}, {"question": "1947年7月至9月，中国共产党在河北省平山县召开全国土地会议，制定和通过了", "answer": "A", "options": [{"letter": "A", "text": "《中国土地法大纲》"}, {"letter": "B", "text": "《井冈山土地法》"}, {"letter": "C", "text": "《兴国土地法》"}, {"letter": "D", "text": "《关于清算、减租及土地问题的指示》"}], "id": 96}, {"question": "新民主主义革命阶段的基本结束和社会主义革命阶段的开始的标志是", "answer": "A", "options": [{"letter": "A", "text": "中华人民共和国成立"}, {"letter": "B", "text": "三大改造完成"}, {"letter": "C", "text": "中共七届二中全会"}, {"letter": "D", "text": "中共七届三中全会"}], "id": 97}, {"question": "中国共产党探索中国自已建设社会主义道路开始的标志是", "answer": "A", "options": [{"letter": "A", "text": "1956年中共八大的召开"}, {"letter": "B", "text": "1956年《论十大关系》的发表"}, {"letter": "C", "text": "1953年社会主义三大改造的开始"}, {"letter": "D", "text": "1952年国民经济恢复的完成"}], "id": 98}, {"question": "科学发展观的核心是", "answer": "A", "options": [{"letter": "A", "text": "以人为本"}, {"letter": "B", "text": "统筹兼顾"}, {"letter": "C", "text": "第一要义是发展"}, {"letter": "D", "text": "构建和谐社会"}], "id": 99}, {"question": "中国近代史上第一个不平等条约是", "answer": "B", "options": [{"letter": "A", "text": "《中英北京条约》"}, {"letter": "B", "text": "《中英南京条约》"}, {"letter": "C", "text": "《马关条约》"}, {"letter": "D", "text": "《辛丑条约》"}], "id": 100}, {"question": "《资政新篇》是一个", "answer": "A", "options": [{"letter": "A", "text": "具有鲜明资本主义色彩的方案"}, {"letter": "B", "text": "具有鲜明封建主义色彩的方案"}, {"letter": "C", "text": "具有鲜明小资产阶级色彩的方案"}, {"letter": "D", "text": "具有鲜明社会主义色彩的方案"}], "id": 101}, {"question": "孙中山提出的三民主义之民族主义的内容包括", "answer": "A", "options": [{"letter": "A", "text": "驱除鞑虏，恢复中华"}, {"letter": "B", "text": "平均地权"}, {"letter": "C", "text": "创立民国"}, {"letter": "D", "text": "实现共和"}], "id": 102}, {"question": "标志着第一次国共合作的正式形成的是", "answer": "A", "options": [{"letter": "A", "text": "国民党一大的成功召开"}, {"letter": "B", "text": "国民党二大的成功召开"}, {"letter": "C", "text": "国民党三大的成功召开"}, {"letter": "D", "text": "中共三大的召开"}], "id": 103}, {"question": "5．中国共产党人创建了第一个农村革命根据地是", "answer": "A", "options": [{"letter": "A", "text": "井冈山革命根据地"}, {"letter": "B", "text": "赣南革命根据地"}, {"letter": "C", "text": "赣东北革命根据地"}, {"letter": "D", "text": "东固革命根据地"}], "id": 104}, {"question": "抗日战争时期，中国共产党领导的各抗日根据地实行的政权形式是", "answer": "B", "options": [{"letter": "A", "text": "联合政府"}, {"letter": "B", "text": "“三三制”政权"}, {"letter": "C", "text": "共产党一党专政"}, {"letter": "D", "text": "国共作政府"}], "id": 105}, {"question": "1949年9月21日，中国人民政治协商会议第一届全体会议在北平中南海怀仁堂隆重开幕，会议通过了", "answer": "A", "options": [{"letter": "A", "text": "《中国人民政治协商会议共同纲领》"}, {"letter": "B", "text": "《中国土地法大纲》"}, {"letter": "C", "text": "《中华人民共和国宪法》"}, {"letter": "D", "text": "《井冈山土地法》"}], "id": 106}, {"question": "我国对农业手工业进行社会主义改造时采取的方针是", "answer": "A", "options": [{"letter": "A", "text": "积极领导、稳步前进"}, {"letter": "B", "text": "利用、限制"}, {"letter": "C", "text": "鼓励、支持、扶助"}, {"letter": "D", "text": "自愿互利、典型示范、国家帮助"}], "id": 107}, {"question": "毛泽东提出关于社会主义社会两类社会矛盾学说的著作是", "answer": "B", "options": [{"letter": "A", "text": "《论十大关系》"}, {"letter": "B", "text": "《关于正确处理人民内部矛盾的问题》"}, {"letter": "C", "text": "《论人民民主专政》"}, {"letter": "D", "text": "《再论无产阶级专政的历史经验》"}], "id": 108}, {"question": "在近代中国社会的诸矛盾中，最主要的是", "answer": "A", "options": [{"letter": "A", "text": "帝国主义和中华民族的矛盾"}, {"letter": "B", "text": "封建主义和人民大众的矛盾"}, {"letter": "C", "text": "资产阶级和无产阶级的矛盾"}, {"letter": "D", "text": "反动统治阶级内部的矛盾"}], "id": 109}, {"question": "近代提出“师夷长技以制夷”先进思想的人是", "answer": "C", "options": [{"letter": "A", "text": "林则徐"}, {"letter": "B", "text": "龚自珍"}, {"letter": "C", "text": "魏源"}, {"letter": "D", "text": "郑观应"}], "id": 110}, {"question": "近代中国首先提出“振兴中华”口号的是", "answer": "D", "options": [{"letter": "A", "text": "康有为"}, {"letter": "B", "text": "洪秀全"}, {"letter": "C", "text": "林则徐"}, {"letter": "D", "text": "孙中山"}], "id": 111}, {"question": "第一次国共合作的政治基础和共同纲领是", "answer": "D", "options": [{"letter": "A", "text": "三民主义"}, {"letter": "B", "text": "三大政策"}, {"letter": "C", "text": "中共一大纲领"}, {"letter": "D", "text": "新三民主义"}], "id": 112}, {"question": "下列选项中，结束了王明“左”倾冒险主义在党中央的统治的会议", "answer": "A", "options": [{"letter": "A", "text": "遵议会议"}, {"letter": "B", "text": "古田会议"}, {"letter": "C", "text": "中共六大"}, {"letter": "D", "text": "中共四大"}], "id": 113}, {"question": "西安事变的和平解决标志着", "answer": "B", "options": [{"letter": "A", "text": "抗日民族统一战线正式形成"}, {"letter": "B", "text": "十年内战结束，国内和平基本实现"}, {"letter": "C", "text": "逼蒋成功，反蒋失败"}, {"letter": "D", "text": "全民族抗战正式开始"}], "id": 114}, {"question": "抗战胜利后，中间路线的主张实质是", "answer": "B", "options": [{"letter": "A", "text": "走半殖民地半封建社会老路"}, {"letter": "B", "text": "走旧民主主义的道路"}, {"letter": "C", "text": "既非资本主义也非社会主义的路"}, {"letter": "D", "text": "新民主主义的道路"}], "id": 115}, {"question": "社会主义改造基本完成后，中国共产党的中心任务是", "answer": "C", "options": [{"letter": "A", "text": "调动一切积极因素，为社会主义事业服务"}, {"letter": "B", "text": "正确处理人民内部矛盾，巩固社会主义制度"}, {"letter": "C", "text": "集中力量发展生产力，建设社会主义现代化强国"}, {"letter": "D", "text": "加强和改进党的建设，巩固党的执政地位"}], "id": 116}, {"question": "1978年关于真理标准问题的讨论，是为了解决中国共产党的", "answer": "B", "options": [{"letter": "A", "text": "组织路线问题"}, {"letter": "B", "text": "思想路线问题"}, {"letter": "C", "text": "政治路线问题"}, {"letter": "D", "text": "社会主义初级阶段的基本路线问题"}], "id": 117}]
 
-let currentMode = 'all';
-let questions = [];
-let currentIndex = 0;
-let score = 0;
-let wrong = 0;
-let answered = {}; // question id -> user's answer letter
+let mode = 'all', total = 0;
+let qlist = [], idx = 0, correct = 0, wrong = 0, choices = {};
 
-function shuffle(arr) {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
+function shuffle(a) { const b=[...a]; for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]];} return b; }
+
+function setMode(m) {
+  mode=m;
+  document.querySelectorAll('.mode-btn[data-mode]').forEach(b=>b.classList.remove('active'));
+  document.querySelector('.mode-btn[data-mode="'+m+'"]').classList.add('active');
+  reset();
 }
 
-function setMode(mode) {
-  currentMode = mode;
-  document.querySelectorAll('#controls .btn').forEach(b => b.classList.remove('active'));
-  event.target.classList.add('active');
-  resetQuiz();
+function shuffleOptions(q) {
+  const oldToNew = {};
+  const shuffled = shuffle([...q.options]);
+  const letters = 'ABCDEFGHIJ'.slice(0, shuffled.length);
+  shuffled.forEach((o, i) => {
+    oldToNew[o.letter] = letters[i];
+    o.letter = letters[i];
+  });
+  q.options = shuffled;
+  q.answer = oldToNew[q.answer];
 }
 
-function resetQuiz() {
-  if (currentMode === 'all') {
-    questions = shuffle([...ALL_QUESTIONS]);
-  } else if (currentMode === 'random20') {
-    questions = shuffle([...ALL_QUESTIONS]).slice(0, 20);
-  } else if (currentMode === 'random50') {
-    questions = shuffle([...ALL_QUESTIONS]).slice(0, 50);
-  }
-  currentIndex = 0;
-  score = 0;
-  wrong = 0;
-  answered = {};
-  updateStats();
-  if (questions.length > 0) {
-    renderQuestion();
-  } else {
-    document.getElementById('quizArea').innerHTML = '<p style="text-align:center;padding:40px;">暂无题目</p>';
-  }
+function reset() {
+  const mapped=ALL.map((q,i)=>({...q,_idx:i}));
+  if(mode==='all') qlist=shuffle(mapped);
+  else if(mode==='r20') qlist=shuffle(mapped).slice(0,20);
+  else qlist=shuffle(mapped).slice(0,50);
+  qlist.forEach(q => shuffleOptions(q));
+  total=qlist.length; idx=0; correct=0; wrong=0; choices={};
+  updateStats(); render(); window.scrollTo({top:0,behavior:'smooth'});
 }
 
 function updateStats() {
-  document.getElementById('progressText').textContent = currentIndex + '/' + questions.length;
-  document.getElementById('scoreText').textContent = score;
-  document.getElementById('wrongText').textContent = wrong;
-  const pct = questions.length > 0 ? (currentIndex / questions.length * 100) : 0;
-  document.getElementById('progressFill').style.width = pct + '%';
+  const done=correct+wrong;
+  document.getElementById('sTotal').textContent=total;
+  document.getElementById('sDone').textContent=done;
+  document.getElementById('sCorrect').textContent=correct;
+  document.getElementById('sWrong').textContent=wrong;
+  document.getElementById('lblTotal').textContent=total;
+  document.getElementById('lblCurrent').textContent=total>0?idx+1:0;
+  document.getElementById('lblPct').textContent=total>0?Math.round(done/total*100)+'%':'0%';
+  document.getElementById('progressFill').style.width=total>0?(done/total*100)+'%':'0%';
 }
 
-function renderQuestion() {
-  if (currentIndex >= questions.length) {
-    showEndScreen();
-    return;
-  }
-  
-  const q = questions[currentIndex];
-  const area = document.getElementById('quizArea');
-  
-  let optionsHTML = q.options.map(o => {
-    const letter = o.letter;
-    const isSelected = answered[q.id] === letter;
-    const isCorrect = q.answer === letter;
-    let cls = 'option';
-    if (answered[q.id]) {
-      if (isCorrect) cls += ' correct-answer';
-      if (isSelected && !isCorrect) cls += ' wrong-answer';
-    }
-    return `<div class="${cls}" onclick="answerQuestion('${letter}', ${q.id})" data-letter="${letter}">
-      <span class="option-letter">${letter}</span>
-      <span class="option-text">${o.text}</span>
-    </div>`;
+function render() {
+  if(idx>=total){showEnd();return;}
+
+  const q=qlist[idx], chosen=choices[q.id], answered=chosen!==undefined;
+
+  const optHTML=q.options.map(o=>{
+    let cls='opt-item';
+    if(answered){if(o.letter===q.answer)cls+=' is-correct';else if(o.letter===chosen)cls+=' is-wrong';}
+    return `<div class="${cls}" data-letter="${o.letter}"><span class="opt-marker">${o.letter}</span><span class="opt-text">${o.text}</span></div>`;
   }).join('');
-  
-  let feedbackHTML = '';
-  if (answered[q.id]) {
-    const userAns = answered[q.id];
-    const isCorrect = userAns === q.answer;
-    const correctText = q.options.find(o => o.letter === q.answer)?.text || '';
-    feedbackHTML = `<div class="feedback ${isCorrect ? 'correct-fb' : 'wrong-fb'} show">
-      ${isCorrect ? '✅ 正确！' : '❌ 错误 — 正确答案是 ' + q.answer + '. ' + correctText}
-    </div>`;
+
+  let fbHTML='';
+  if(answered){
+    const isRight=chosen===q.answer;
+    const co=q.options.find(o=>o.letter===q.answer);
+    fbHTML=`<div class="feedback ${isRight?'correct-fb':'wrong-fb'}">${isRight?'✓ <strong>回答正确</strong>':'✗ <strong>回答错误</strong> — 正确答案 <strong>'+q.answer+'</strong>：'+(co?co.text:'')}</div>`;
   }
-  
-  area.innerHTML = `
-    <div class="card ${answered[q.id] ? (answered[q.id] === q.answer ? 'correct' : 'wrong') : ''}">
-      <div class="question-number">第 ${currentIndex + 1} / ${questions.length} 题 <span class="mode-badge">${currentMode === 'all' ? '全部' : currentMode === 'random20' ? '随机20' : '随机50'}</span></div>
-      <div class="question-text">${q.question}</div>
-      <div class="options">${optionsHTML}</div>
-      ${feedbackHTML}
+
+  let cardCls='q-card';
+  if(answered)cardCls+=chosen===q.answer?' correct':' wrong';
+
+  document.getElementById('quizArea').innerHTML=`
+    <div class="${cardCls}">
+      <div class="q-header"><span class="q-index">${idx+1}</span></div>
+      <div class="q-text">${q.question}</div>
+      <div class="options-list" id="optGroup">${optHTML}</div>
+      ${fbHTML}
     </div>
-    ${answered[q.id] ? '<div style="text-align:center;margin-top:16px"><button class="btn" onclick="nextQuestion()">下一题 →</button></div>' : ''}
+    ${answered?`<div class="next-area"><button class="btn-next" id="btnNext">下一题 →</button></div>`:''}
+    <div class="kbd-hint">键盘：<span class="kbd-key">A</span> <span class="kbd-key">B</span> <span class="kbd-key">C</span> <span class="kbd-key">D</span> 选择 &nbsp; <span class="kbd-key">→</span> <span class="kbd-key">Enter</span> 下一题</div>
   `;
-  
+
+  if(!answered){document.querySelectorAll('#optGroup .opt-item').forEach(el=>{el.addEventListener('click',()=>answer(el.dataset.letter));});}
+  else {document.getElementById('btnNext').addEventListener('click',next);document.getElementById('btnNext').focus();}
   updateStats();
 }
 
-function answerQuestion(letter, qid) {
-  if (answered[qid] !== undefined) return; // Already answered
-  
-  const q = questions.find(q => q.id === qid);
-  answered[qid] = letter;
-  
-  if (letter === q.answer) {
-    score++;
-  } else {
-    wrong++;
-  }
-  
-  renderQuestion();
-  
-  // Scroll to see feedback
-  setTimeout(() => {
-    const feedback = document.querySelector('.feedback.show');
-    if (feedback) feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  }, 100);
+function answer(letter) {
+  const q=qlist[idx];
+  if(choices[q.id]!==undefined)return;
+  choices[q.id]=letter;
+  if(letter===q.answer)correct++;else wrong++;
+  render();
+  window.scrollTo({top:document.querySelector('.q-card').offsetTop-20,behavior:'smooth'});
 }
 
-function nextQuestion() {
-  currentIndex++;
-  if (currentIndex >= questions.length) {
-    showEndScreen();
-  } else {
-    renderQuestion();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-}
+function next(){idx++;if(idx>=total)showEnd();else{render();window.scrollTo({top:0,behavior:'smooth'});}}
 
-function showEndScreen() {
-  const total = questions.length;
-  const pct = total > 0 ? Math.round(score / total * 100) : 0;
-  let grade = '';
-  let gradeColor = '';
-  if (pct >= 90) { grade = '优秀'; gradeColor = 'var(--jade)'; }
-  else if (pct >= 75) { grade = '良好'; gradeColor = 'var(--gold)'; }
-  else if (pct >= 60) { grade = '及格'; gradeColor = '#d4a017'; }
-  else { grade = '继续努力'; gradeColor = 'var(--vermilion)'; }
-  
-  document.getElementById('quizArea').innerHTML = `
-    <div class="card end-screen">
-      <div style="font-size:1.2rem;color:var(--ink-light);margin-bottom:8px">练习完成</div>
-      <div class="final-score" style="color:${gradeColor}">${score} / ${total}</div>
-      <div style="font-size:1.3rem;color:${gradeColor};margin-bottom:20px">${grade}</div>
-      <div class="stats-detail">
-        正确率：${pct}%<br>
-        正确：${score} 题 &nbsp;|&nbsp; 错误：${wrong} 题<br>
-        未答：${total - score - wrong} 题
+function showEnd() {
+  const pct=total?Math.round(correct/total*100):0;
+  let grade,color;
+  if(pct>=90){grade='卓越';color='var(--jade)';}else if(pct>=75){grade='优良';color='var(--gold)';}else if(pct>=60){grade='通过';color='#c9a020';}else{grade='继续精进';color='var(--vermilion)';}
+  document.getElementById('quizArea').innerHTML=`
+    <div class="q-card end-screen">
+      <div class="end-icon" style="color:${color}">${pct>=60?'✦':'◇'}</div>
+      <div class="end-score" style="color:${color}">${correct}<span style="font-size:1.5rem;opacity:0.5">/${total}</span></div>
+      <div class="end-grade" style="color:${color}">${grade}</div>
+      <div class="end-stats">正确率 ${pct}% · 正确 ${correct} 题 · 错误 ${wrong} 题</div>
+      <div class="end-actions">
+        <button class="btn-next" onclick="reset()">↺ 重新练习</button>
+        <button class="btn-next" onclick="reviewWrong()">错题重练</button>
       </div>
-      <button class="btn" onclick="resetQuiz()">🔄 重新练习</button>
-      <button class="btn" style="margin-left:8px" onclick="reviewWrong()">📋 查看错题</button>
-    </div>
-  `;
+    </div>`;
   updateStats();
 }
 
 function reviewWrong() {
-  // Filter questions answered wrong
-  const wrongQs = questions.filter(q => answered[q.id] !== undefined && answered[q.id] !== q.answer);
-  if (wrongQs.length === 0) {
-    document.getElementById('quizArea').innerHTML = `
-      <div class="card end-screen">
-        <div style="font-size:1.2rem;color:var(--jade);margin-bottom:12px">🎉 没有错题！</div>
-        <button class="btn" onclick="resetQuiz()">🔄 重新练习</button>
-      </div>`;
+  const wq=qlist.filter(q=>choices[q.id]!==undefined&&choices[q.id]!==q.answer);
+  if(!wq.length){
+    document.getElementById('quizArea').innerHTML=`<div class="q-card end-screen"><div class="end-icon" style="color:var(--jade)">★</div><div style="font-size:1.1rem;color:var(--text-secondary);margin:8px 0">全部正确，无可挑剔</div><div class="end-actions" style="margin-top:20px"><button class="btn-next" onclick="reset()">↺ 重新练习</button></div></div>`;
     return;
   }
-  questions = shuffle(wrongQs);
-  currentIndex = 0;
-  score = 0;
-  wrong = 0;
-  answered = {};
-  updateStats();
-  renderQuestion();
+  qlist=shuffle(wq);qlist.forEach(q=>shuffleOptions(q));total=qlist.length;idx=0;correct=0;wrong=0;choices={};updateStats();render();
 }
 
-// Keyboard support
-document.addEventListener('keydown', (e) => {
-  if (currentIndex >= questions.length) return;
-  const q = questions[currentIndex];
-  const key = e.key.toUpperCase();
-  if (['A','B','C','D','E'].includes(key) && answered[q.id] === undefined) {
-    // Check if this option exists
-    if (q.options.some(o => o.letter === key)) {
-      answerQuestion(key, q.id);
-    }
-  }
-  if (e.key === 'Enter' || e.key === 'ArrowRight') {
-    if (answered[q.id] !== undefined) {
-      nextQuestion();
-    }
-  }
+document.querySelectorAll('.mode-btn[data-mode]').forEach(b=>b.addEventListener('click',()=>setMode(b.dataset.mode)));
+document.getElementById('btnReset').addEventListener('click',reset);
+
+document.addEventListener('keydown',e=>{
+  if(idx>=total)return;
+  const q=qlist[idx],key=e.key.toUpperCase();
+  if(['A','B','C','D','E'].includes(key)&&choices[q.id]===undefined){if(q.options.some(o=>o.letter===key))answer(key);}
+  if((e.key==='Enter'||e.key==='ArrowRight')&&choices[q.id]!==undefined)next();
 });
 
-// Start
-resetQuiz();
+reset();
 </script>
 </body>
 </html>
